@@ -1,7 +1,8 @@
 ---
 permalink: /publications/
-title: Selected Publications
 ---
+
+<p> </p>
 
 ## Preprints
 * **Zhuangdi Zhu**, Kaixiang Lin Jiayu Zhou. \
