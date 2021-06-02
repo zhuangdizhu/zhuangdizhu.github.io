@@ -1,14 +1,12 @@
 ---
-<!-- layout: archive -->
-title: "Zhuangdi Zhu (朱庄翟)"
+layout: archive
+title: "CV"
 permalink: /cv/
 author_profile: true
 redirect_from:
   - /resume
 ---
 
-{% include base_path %}
+<iframe src="/files/CV_Zhuangdi.pdf" width="100%" height="500" frameborder="no" border="0" marginwidth="0" marginheight="0"></iframe>
 
-[Click to View My Up-to-date Curriculum Vitae [PDF]](http://zhuangdizhu.github.io/files/CV_Zhuangdi.pdf)
-
-<!-- <embed src="http://lantaoyu.com/files/lantaoyu_cv.pdf" width="650" height="1800" type='application/pdf'> -->
+You can download a PDF copy of my CV [here](/files/CV_Zhuangdi.pdf).
