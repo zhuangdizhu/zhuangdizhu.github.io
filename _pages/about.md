@@ -14,7 +14,7 @@ redirect_from:
 
 ## Short Biography
 
-I am Zhu, Zhuangdi (朱庄翟), a PhD student at the [Department of Computer Science and Engineering](https://www.cse.msu.edu/), Michigan State University, advised by [Prof. Jiayu Zhou](https://jiayuzhou.github.io/).
+I am Zhu, Zhuangdi (朱 [庄](https://en.wikipedia.org/wiki/Zhuang_Zhou) [翟](https://en.wikipedia.org/wiki/Mozi)), a PhD student at the [Department of Computer Science and Engineering](https://www.cse.msu.edu/), Michigan State University, advised by [Prof. Jiayu Zhou](https://jiayuzhou.github.io/).
 
 
 I am a member of the [ILLIDAN Lab@MSU](https://illidanlab.github.io/). My research interest resides in the general area of ***Machine Learning*** and its practical applications. 
