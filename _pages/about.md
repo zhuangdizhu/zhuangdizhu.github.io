@@ -17,8 +17,8 @@ redirect_from:
 I am Zhu, Zhuangdi (朱庄翟), a PhD student at the [Department of Computer Science and Engineering](https://www.cse.msu.edu/), Michigan State University, advised by [Prof. Jiayu Zhou](https://jiayuzhou.github.io/).
 
 
-My research interest resides in the general area of ***Machine Learning*** and its practical applications. 
-* I am particularly focusing on designing principled algorithms for effective **knowledge transfer** across different domains.
+I am a member of the [ILLIDAN Lab@MSU](https://illidanlab.github.io/). My research interest resides in the general area of ***Machine Learning*** and its practical applications. 
+* I am particularly focusing on designing principled algorithms for effective ***knowledge transfer*** across different domains.
 * My current research involves ***Reinforcement Learning*** and ***Distributed Machine Learning***. 
 * My previous research experiences includes  ***systems***, ***scheduling***, and ***wireless networking***.
 
@@ -27,7 +27,7 @@ My research interest resides in the general area of ***Machine Learning*** and i
 
 * **June, 2021**: I will join facebook (the Ads Core Machine Learning team) as a PhD SDE intern this summer. 
 * **May, 2021**: Our paper about Knowledge Transfer in Federated Learning has been accepted by ICML 2021 ([paper](https://arxiv.org/pdf/2105.10056.pdf) and [code](https://github.com/zhuangdizhu/FedGen)).
-* **May, 2021**: Our paper about Debiasing in Federated Learning has been accepted by KDD 2021.
+* **May, 2021**: Our paper about Debiasing in Federated Learning has been accepted by KDD 2021 ([project](https://jyhong.gitlab.io/project/federated-learning/)).
 * **Sep, 2020** Our paper about Imitation Learning has been accepted by NeurIPS 2020 ([paper](https://papers.nips.cc/paper/2020/file/92977ae4d2ba21425a59afb269c2a14e-Paper.pdf) and [code](https://github.com/illidanlab/opolo-code)).
 
 

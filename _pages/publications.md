@@ -23,7 +23,7 @@ permalink: /publications/
   
 * Junyuan Hong, **Zhuangdi Zhu**, Jiayu Zhou. \
   **Federated Adversarial Debiasing.**
-  *Proceedings of the 27th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining. 2021* 
+  *Proceedings of the 27th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining. 2021* [[project]](https://jyhong.gitlab.io/project/federated-learning/) 
   
 * **Zhuangdi Zhu**, Kaixiang Lin, Bodai, Jiayu Zhou. \
   **Off-Policy Imitation Learning from Observations.**
