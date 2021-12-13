@@ -14,8 +14,8 @@ redirect_from:
 
 ## Short Biography
 
-I am Zhu, Zhuangdi (朱 [庄](https://en.wikipedia.org/wiki/Zhuang_Zhou) [翟](https://en.wikipedia.org/wiki/Mozi)), a PhD student at the [Department of Computer Science and Engineering](https://www.cse.msu.edu/), Michigan State University, advised by [Prof. Jiayu Zhou](https://jiayuzhou.github.io/).
-
+[comment]: <> (I am Zhu, Zhuangdi &#40;朱 [庄]&#40;https://en.wikipedia.org/wiki/Zhuang_Zhou&#41; [翟]&#40;https://en.wikipedia.org/wiki/Mozi&#41;&#41;, a PhD student at the [Department of Computer Science and Engineering]&#40;https://www.cse.msu.edu/&#41;, Michigan State University, advised by [Prof. Jiayu Zhou]&#40;https://jiayuzhou.github.io/&#41;.)
+I am Zhu, Zhuangdi, a PhD candidate at the [Department of Computer Science and Engineering](https://www.cse.msu.edu/), Michigan State University, advised by [Prof. Jiayu Zhou](https://jiayuzhou.github.io/).
 
 I am a member of the [ILLIDAN Lab@MSU](https://illidanlab.github.io/). My research interest resides in the general area of ***Machine Learning*** and its practical applications. 
 * I am particularly focusing on designing principled algorithms for effective ***knowledge transfer*** across different domains.
@@ -25,6 +25,7 @@ I am a member of the [ILLIDAN Lab@MSU](https://illidanlab.github.io/). My resear
 
 ## <img src="/images/logos/celebrate.png?raw=true" alt="Photo" style="width: 60px;"/> News
 
+* **Dec, 2021**: Our paper about adaptive imitation learning has been accepted by AAAI 2022. 
 * **June, 2021**: I joined facebook (the Ads Core Machine Learning team) as a PhD SDE intern this summer. 
 * **May, 2021**: Our paper about Knowledge Transfer in Federated Learning has been accepted by ICML 2021 ([paper](https://arxiv.org/pdf/2105.10056.pdf) and [code](https://github.com/zhuangdizhu/FedGen)).
 * **May, 2021**: Our paper about Debiasing in Federated Learning has been accepted by KDD 2021 ([project](https://jyhong.gitlab.io/project/federated-learning/)).
