@@ -63,8 +63,9 @@ B.E. in Computer Science and Technology <span style="color: grey;">(Sep 2011 - J
 <img src="/images/logos/google.png?raw=true" alt="Photo" style="width: 40px;"/>  &emsp;**PhD software Engineer Intern**, Google \
 &emsp;&emsp;&emsp;&emsp;<span style="color: grey;">May 2018 - Aug 2018, Mountain View, CA, US </span> 
 
-<img src="/images/logos/huawei.png?raw=true" alt="Photo" style="width: 40px;"/>  &emsp;**Research Associate**, Huawei \
-&emsp;&emsp;&emsp;&emsp;<span style="color: grey;">March 2016 - Aug 2016, Hong Kong, China </span> 
+[comment]: <> (<img src="/images/logos/huawei.png?raw=true" alt="Photo" style="width: 40px;"/>  &emsp;**Research Associate**, Huawei \)
+
+[comment]: <> (&emsp;&emsp;&emsp;&emsp;<span style="color: grey;">March 2016 - Aug 2016, Hong Kong, China </span> )
 
 
 <img src="/images/logos/ibm.jpeg?raw=true" alt="Photo" style="width: 40px;"/>  &emsp;**Research Intern**, IBM \
