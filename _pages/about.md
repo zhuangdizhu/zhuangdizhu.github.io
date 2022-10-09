@@ -6,10 +6,10 @@ redirect_from:
   - /about.html
 ---
 
-
 <p align="center">
- <img src="/images/judyzhu.jpeg?raw=true" alt="Photo" style="width: 400px;"/> 
+ <img src="/images/judyzhu.jpeg?raw=true" alt="Photo" style="width: 100px;"/> 
 </p>
+
 
 
 ## Short Biography
