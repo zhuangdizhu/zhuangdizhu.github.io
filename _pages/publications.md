@@ -6,25 +6,21 @@ permalink: /publications/
 
 ## Preprints
 * **Zhuangdi Zhu**, Kaixiang Lin, Anil K. Jain, and Jiayu Zhou. \
-  **Transfer Learning in Deep Reinforcement Learning: A Survey.** [[paper]](https://arxiv.org/pdf/2009.07888.pdf)
+  Transfer Learning in Deep Reinforcement Learning: A Survey. [[paper]](https://arxiv.org/pdf/2009.07888.pdf)
   
   
 
 ## Conference and Journal Publications
-* Zhuangdi Zhu, Junyuan Hong, Steve Drew, Jiayu Zhou. \
+* Zhuangdi Zhu, Junyuan Hong, Steve Drew, Jiayu Zhou. \ 
   Resilient and Communication Efficient Learning for Heterogeneous Federated Systems. 
   *Proceedings of the 39-th International Conference on Machine Learning* (**ICML**), 2022. [[paper]](https://proceedings.mlr.press/v162/zhu22e/zhu22e.pdf)
   
-* Zhuangdi Zhu, Kaixiang Lin, Bo Dai,  Jiayu Zhou. \
-  
-  Self-Adaptive Imitation Learning: Learning Tasks with Delayed Rewards from Sub-Optimal Demonstrations.
-  
+* Zhuangdi Zhu, Kaixiang Lin, Bo Dai,  Jiayu Zhou. \ 
+  Self-Adaptive Imitation Learning: Learning Tasks with Delayed Rewards from Sub-Optimal Demonstrations. 
   *Proceedings of the 36-th AAAI Conference on Artificial Intelligence* (**AAAI**), 2022. [[paper]]()
   
 * Shuyang Yu, Zhuangdi Zhu, Boyang Liu, Anil Jain, and Jiayu Zhou. \
-  
   Robust Unsupervised Domain Adaptation from a Corrupted Source.
-  
   *The 22nd IEEE International Conference on Data Mining* (**ICDM**), 2022.
   
 * Zhuangdi Zhu, Junyuan Hong, Jiayu Zhou. \
@@ -41,5 +37,5 @@ permalink: /publications/
 
 ## Patents 
 * Quinn, Philip, **Zhuangdi Zhu**. \
-  **Sensing Hand Gestures Using Optical Sensors.** 
+  Sensing Hand Gestures Using Optical Sensors.
   *U.S. Patent Application No. 16/243,767.*[[patent]](https://patents.google.com/patent/US20200150772A1/en)
