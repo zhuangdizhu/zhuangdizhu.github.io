@@ -7,12 +7,13 @@ redirect_from:
 ---
 
 <p align="center">
- <img src="/images/judyzhu.jpeg?raw=true" alt="Photo" style="width: 100px;"/> 
+ <img src="/images/profile.png?raw=true" alt="Photo" style="width: 400px;"/> 
 </p>
 
 
 
 ## Short Biography
+
 
 
 I am Zhu (朱), Zhuangdi ([庄](https://en.wikipedia.org/wiki/Zhuang_Zhou) [翟](https://en.wikipedia.org/wiki/Mozi)). I received my PhD degree from the Department of Computer Science and Engineering, Michigan State University, under the supervison of [Professor Jiayu Zhou](https://jiayuzhou.github.io/). 
