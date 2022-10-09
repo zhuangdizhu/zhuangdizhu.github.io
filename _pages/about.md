@@ -8,17 +8,17 @@ redirect_from:
 
 
 <p align="center">
- <img src="/images/profile.png?raw=true" alt="Photo" style="width: 400px;"/> 
+ <img src="/images/judyzhu.jpeg?raw=true" alt="Photo" style="width: 400px;"/> 
 </p>
 
 
 ## Short Biography
 
-<!-- I am Zhu, Zhuangdi &#40;朱 [庄]&#40;https://en.wikipedia.org/wiki/Zhuang_Zhou&#41; [翟]&#40;https://en.wikipedia.org/wiki/Mozi&#41;&#41. a PhD student at the [Department of Computer Science and Engineering]&#40;https://www.cse.msu.edu/&#41;, Michigan State University, advised by [Prof. Jiayu Zhou]&#40;https://jiayuzhou.github.io/&#41;.) -->
-I am Zhu, Zhuang ([庄](https://en.wikipedia.org/wiki/Zhuang_Zhou)) di([翟](https://en.wikipedia.org/wiki/Mozi)). I received my PhD degree from the [Department of Computer Science and Engineering](https://www.cse.msu.edu/), Michigan State University, under the supervison of [Professor Jiayu Zhou](https://jiayuzhou.github.io/). 
+
+I am Zhu (朱), Zhuangdi ([庄](https://en.wikipedia.org/wiki/Zhuang_Zhou) [翟](https://en.wikipedia.org/wiki/Mozi)). I received my PhD degree from the Department of Computer Science and Engineering, Michigan State University, under the supervison of [Professor Jiayu Zhou](https://jiayuzhou.github.io/). 
 
 My research interest resides in the general area of ***Machine Learning*** and its practical applications. 
-* I am particularly focusing on designing principled algorithms for effective ***knowledge transfer*** across different domains.
+* I focus on designing principled algorithms for effective ***knowledge transfer*** across different domains.
 * My current research involves ***Reinforcement Learning*** and ***Distributed Machine Learning***. 
 * My previous research experiences includes  ***systems***, ***scheduling***, and ***wireless networking***.
 
@@ -39,7 +39,6 @@ My research interest resides in the general area of ***Machine Learning*** and i
 **Michigan State University** \
 PhD majoring in Computer Science <span style="color: grey;">(Jan 2017 - Aug 2022)</span>  
 <span style="color: grey;">East Lansing, MI, US</span> 
-
 
 **Australian National University** \
 Undergraduate Exchange Program <span style="color: grey;">(June 2014 - Dec 2014)</span> \
