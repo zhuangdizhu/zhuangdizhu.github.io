@@ -14,10 +14,10 @@ redirect_from:
 
 ## Short Biography
 
-[comment]: <> (I am Zhu, Zhuangdi &#40;朱 [庄]&#40;https://en.wikipedia.org/wiki/Zhuang_Zhou&#41; [翟]&#40;https://en.wikipedia.org/wiki/Mozi&#41;&#41;, a PhD student at the [Department of Computer Science and Engineering]&#40;https://www.cse.msu.edu/&#41;, Michigan State University, advised by [Prof. Jiayu Zhou]&#40;https://jiayuzhou.github.io/&#41;.)
-I am Zhu, Zhuangdi, a PhD candidate at the [Department of Computer Science and Engineering](https://www.cse.msu.edu/), Michigan State University, advised by [Prof. Jiayu Zhou](https://jiayuzhou.github.io/).
+<!-- I am Zhu, Zhuangdi &#40;朱 [庄]&#40;https://en.wikipedia.org/wiki/Zhuang_Zhou&#41; [翟]&#40;https://en.wikipedia.org/wiki/Mozi&#41;&#41. a PhD student at the [Department of Computer Science and Engineering]&#40;https://www.cse.msu.edu/&#41;, Michigan State University, advised by [Prof. Jiayu Zhou]&#40;https://jiayuzhou.github.io/&#41;.) -->
+I am Zhu, Zhuang ([庄](https://en.wikipedia.org/wiki/Zhuang_Zhou)) di([翟](https://en.wikipedia.org/wiki/Mozi)). I received my PhD degree from the [Department of Computer Science and Engineering](https://www.cse.msu.edu/), Michigan State University, under the supervison of [Professor Jiayu Zhou](https://jiayuzhou.github.io/). 
 
-I am a member of the [ILLIDAN Lab@MSU](https://illidanlab.github.io/). My research interest resides in the general area of ***Machine Learning*** and its practical applications. 
+My research interest resides in the general area of ***Machine Learning*** and its practical applications. 
 * I am particularly focusing on designing principled algorithms for effective ***knowledge transfer*** across different domains.
 * My current research involves ***Reinforcement Learning*** and ***Distributed Machine Learning***. 
 * My previous research experiences includes  ***systems***, ***scheduling***, and ***wireless networking***.
@@ -25,7 +25,9 @@ I am a member of the [ILLIDAN Lab@MSU](https://illidanlab.github.io/). My resear
 
 ## <img src="/images/logos/celebrate.png?raw=true" alt="Photo" style="width: 60px;"/> News
 
-* **Dec, 2021**: Our paper about adaptive imitation learning has been accepted by AAAI 2022. 
+* **Sep, 2022**: Our paper about Robust Unsupervised Domain Adaptation has been accepted by ICDM 2022.
+* **May, 2022**: Our paper about Resilient and Communication Efficient Federated Learning has been accepted by ICML 2022 ([paper](https://proceedings.mlr.press/v162/zhu22e/zhu22e.pdf)).
+* **Dec, 2021**: Our paper about Self Adaptive Imitation Learning has been accepted by AAAI 2022 ([paper](https://www.aaai.org/AAAI22Papers/AAAI-10614.ZhuZ.pdf)). 
 * **June, 2021**: I joined facebook (the Ads Core Machine Learning team) as a PhD SDE intern this summer. 
 * **May, 2021**: Our paper about Knowledge Transfer in Federated Learning has been accepted by ICML 2021 ([paper](https://arxiv.org/pdf/2105.10056.pdf) and [code](https://github.com/zhuangdizhu/FedGen)).
 * **May, 2021**: Our paper about Debiasing in Federated Learning has been accepted by KDD 2021 ([project](https://jyhong.gitlab.io/project/federated-learning/)).
