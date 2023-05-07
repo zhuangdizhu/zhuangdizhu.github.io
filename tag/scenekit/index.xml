@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SceneKit | Zhuangdi Zhu</title>
+    <link>https://zhuangdizhu.github.io/tag/scenekit/</link>
+      <atom:link href="https://zhuangdizhu.github.io/tag/scenekit/index.xml" rel="self" type="application/rss+xml" />
+    <description>SceneKit</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2023 Zhuangdi Zhu</copyright><lastBuildDate>Wed, 04 Feb 2015 18:11:46 +0800</lastBuildDate>
+    <image>
+      <url>https://zhuangdizhu.github.io/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_512x512_fill_lanczos_center_3.png</url>
+      <title>SceneKit</title>
+      <link>https://zhuangdizhu.github.io/tag/scenekit/</link>
+    </image>
+    
+    <item>
+      <title>The method resetTransform of SCNPhysicsBody</title>
+      <link>https://zhuangdizhu.github.io/post/2015-02-04-resettransform-at-scnphysicsbody/</link>
+      <pubDate>Wed, 04 Feb 2015 18:11:46 +0800</pubDate>
+      <guid>https://zhuangdizhu.github.io/post/2015-02-04-resettransform-at-scnphysicsbody/</guid>
+      <description>&lt;!-- {% include JB/setup %} --&gt;
+&lt;p&gt;According to the SceneKit document, the function of &lt;code&gt;resetTransform&lt;/code&gt; is:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Updates the position and orientation of a body in the physics simulation to match that of the node to which the body is attached.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Through experiment, I found this is little special.&lt;/p&gt;
+&lt;p&gt;If you do this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-swift&#34;&gt;var node = SCNNode(geomentry: SCNBox())
+node.position = SCNVector3(0, 1, 0)
+node.rotation = SCNVector4(1, 0, 0, CGFloat(M_PI)/2)
+node.physicsBody = SCNPhysicsBody(type: .Dynamic, nil)
+scene.rootNode.addChildNode(node)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you get the &lt;code&gt;position&lt;/code&gt; and &lt;code&gt;rotation&lt;/code&gt; of &lt;code&gt;node.presentationNode()&lt;/code&gt; in the render delegate, where I mean you need to get the latest and real data, you will found the effect of the setup of node&amp;rsquo;s position and rotation is not work at the begining.&lt;/p&gt;
+&lt;p&gt;At the begining, the &lt;code&gt;position&lt;/code&gt; will be &lt;code&gt;(0, 0, 0)&lt;/code&gt;, but not what you have set, &lt;code&gt;(0, 1, 0)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;If you have read the document about &lt;code&gt;SCNNode.position&lt;/code&gt; and &lt;code&gt;SCNNode.rotation&lt;/code&gt;, you will found:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;position&lt;/p&gt;
+&lt;p&gt;The translation applied to the node. &lt;strong&gt;Animatable&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The &lt;strong&gt;Animatable&lt;/strong&gt; means it will take several frames to get the effect.&lt;/p&gt;
+&lt;p&gt;However, it&amp;rsquo;s different when you use resetTransform of SCNPhysicsBody:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-swift&#34;&gt;var node = SCNNode(geomentry: SCNBox())
+node.position = SCNVector3(0, 1, 0)
+node.rotation = SCNVector4(1, 0, 0, CGFloat(M_PI)/2)
+node.physicsBody = SCNPhysicsBody(type: .Dynamic, nil)
+scene.rootNode.addChildNode(node)
+node.physicsBody.resetTransform()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The effect will work at the begining.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

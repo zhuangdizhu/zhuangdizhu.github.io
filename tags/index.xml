@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags | Zhuangdi Zhu</title>
+    <link>https://zhuangdizhu.github.io/tags/</link>
+      <atom:link href="https://zhuangdizhu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <description>Tags</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2023 Zhuangdi Zhu</copyright><lastBuildDate>Thu, 02 Jun 2022 13:08:20 +0800</lastBuildDate>
+    <image>
+      <url>https://zhuangdizhu.github.io/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_512x512_fill_lanczos_center_3.png</url>
+      <title>Tags</title>
+      <link>https://zhuangdizhu.github.io/tags/</link>
+    </image>
+    
+  </channel>
+</rss>

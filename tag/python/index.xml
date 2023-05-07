@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python | Zhuangdi Zhu</title>
+    <link>https://zhuangdizhu.github.io/tag/python/</link>
+      <atom:link href="https://zhuangdizhu.github.io/tag/python/index.xml" rel="self" type="application/rss+xml" />
+    <description>Python</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2023 Zhuangdi Zhu</copyright><lastBuildDate>Thu, 15 Nov 2018 11:47:06 -0500</lastBuildDate>
+    <image>
+      <url>https://zhuangdizhu.github.io/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_512x512_fill_lanczos_center_3.png</url>
+      <title>Python</title>
+      <link>https://zhuangdizhu.github.io/tag/python/</link>
+    </image>
+    
+    <item>
+      <title>Python Decorator</title>
+      <link>https://zhuangdizhu.github.io/post/python-decorator/</link>
+      <pubDate>Thu, 15 Nov 2018 11:47:06 -0500</pubDate>
+      <guid>https://zhuangdizhu.github.io/post/python-decorator/</guid>
+      <description>&lt;p&gt;When refactoring a codes, we need to extract duplicated features from different methods or functions. A magic in Python 3 is to decorate the a striped basic functions with sharing features.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-decorator&#34;&gt;What is decorator?&lt;/h2&gt;
+&lt;p&gt;A (almost) minimal demo:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from functools import wraps
+def my_decorator(func):
+  # to make sure func name are included.
+  @wraps(func)
+  def wrapper(x):
+    &amp;quot;&amp;quot;&amp;quot; function wrapper of my_decorator &amp;quot;&amp;quot;&amp;quot;
+    print(&amp;quot; Hi, &amp;quot;) + func.__name__ + &amp;quot; return.&amp;quot;)
+    return func(x)
+  return wrapper
+
+# use decorator
+@my_decorator
+def foo(x):
+  return x + 1
+
+foo(10)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;why-decorator&#34;&gt;Why decorator?&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.python-course.eu/python3_memoization.php#callable%20class&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Memoization&lt;/a&gt;: speed up function evaluation by storing the &lt;code&gt;{input: output}&lt;/code&gt; dict.&lt;/li&gt;
+&lt;li&gt;Decorate a function with additional processes which probably are duplicated from other funcs. For example, you can count the evaluation times in a decorator.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;use-class-as-a-decorator&#34;&gt;Use class as a decorator&lt;/h2&gt;
+&lt;p&gt;You can transform class into function by adding a &lt;code&gt;__call__&lt;/code&gt; method to the class.&lt;/p&gt;
+&lt;p&gt;Decorator demo:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;class my_decorator:
+  def __init__(self, f):
+    self.f = f
+  
+  def __call__(self):
+    print(&amp;quot;Decorating &amp;quot;, self.f.__name__)
+    self.f()
+
+@my_decorator
+def foo():
+  print(&amp;quot;hello from foo&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Further reading: &lt;a href=&#34;https://www.python-course.eu/python3_decorators.php&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Python3 decorators tutorial&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

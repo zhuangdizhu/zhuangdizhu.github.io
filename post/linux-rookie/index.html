@@ -1,0 +1,1459 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.2.0 for Hugo" />
+  
+
+  
+    <meta name="google-site-verification" content="Z-TOwJ6j5heN4dTEudyioNjVEEkgc9fMJOxhU0OYLqs" />
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Zhuangdi Zhu" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="As a MS student, I am going to leave my lab at USTC. With this post, I&rsquo;d like to share my experiences on the Linux system, especially for those who are new to such a system." />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://zhuangdizhu.github.io/post/linux-rookie/" />
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.a809a4e79df6c8ad0fe4bd60dc874190.css" />
+
+  
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-59631745-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-59631745-2', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://zhuangdizhu.github.io/post/linux-rookie/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary" />
+  
+  <meta property="og:site_name" content="Zhuangdi Zhu" />
+  <meta property="og:url" content="https://zhuangdizhu.github.io/post/linux-rookie/" />
+  <meta property="og:title" content="Linux Rookie Book | Zhuangdi Zhu" />
+  <meta property="og:description" content="As a MS student, I am going to leave my lab at USTC. With this post, I&rsquo;d like to share my experiences on the Linux system, especially for those who are new to such a system." /><meta property="og:image" content="https://zhuangdizhu.github.io/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://zhuangdizhu.github.io/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2018-06-11T18:11:46&#43;08:00"
+      />
+    
+    <meta property="article:modified_time" content="2018-06-11T18:11:46&#43;08:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://zhuangdizhu.github.io/post/linux-rookie/"
+  },
+  "headline": "Linux Rookie Book",
+  
+  "datePublished": "2018-06-11T18:11:46+08:00",
+  "dateModified": "2018-06-11T18:11:46+08:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Zhuangdi Zhu"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Michigan Statue University",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://zhuangdizhu.github.io/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "\u003cp\u003eAs a MS student, I am going to leave my lab at USTC. With this post, I\u0026rsquo;d like to share my experiences on the Linux system, especially for those who are new to such a system.\u003c/p\u003e"
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>Linux Rookie Book | Zhuangdi Zhu</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="77b619f0ee8fbdc764f88005ceb6e68b" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.4be02a3b391999348b0c7478778a0e4b.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Zhuangdi Zhu</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Zhuangdi Zhu</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#professional"><span>Professional Activities</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#service"><span>Services</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#teaching"><span>Teaching</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#experience"><span>Experiences</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#miscellaneous"><span>Miscellaneous</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Linux Rookie Book</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jun 11, 2018
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    4 min read
+  </span>
+  
+
+  
+  
+  
+  
+  
+  
+    <span class="middot-divider"></span>
+    <a href="/post/linux-rookie/#disqus_thread"></a>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/how-to/">How-to</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>As a MS student, I am going to leave my lab at USTC. With this post, I&rsquo;d like to share my experiences on the Linux system, especially for those who are new to such a system.</p>
+<h1 id="part-1-introduction">Part 1: Introduction</h1>
+<h2 id="for-whom-is-the-post-written">For whom is the post written?</h2>
+<p>The audiances are expected to be</p>
+<ul>
+<li>The first-year student for MSc of CS.</li>
+<li>He/She is to do research on fields, including Software Developing, Maching Learning and related directions.</li>
+<li>He/She eager to pay time to solve issues by themselves in the future.</li>
+</ul>
+<p>In addition, it&rsquo;s better to clarify who is not the potential audiances:</p>
+<ul>
+<li><em>Who expect to find all solutions to their works on Linux.</em> The space is limit so as not possible to do that.</li>
+<li><em>Who expect to be a master of the problems introduced here.</em> This is an small cookbook, not encyclopedia.</li>
+</ul>
+<p>Most importantly, remember that I am just a student, but not a master in these fields. Thus, there is hich chance that I could be wrong.</p>
+<h2 id="why-english-rather-than-chinese">Why English rather than Chinese?</h2>
+<p>You may wonder why the post is written in English, while the readers are mostly speaking Chinese.
+This is just my opinion that:</p>
+<ul>
+<li>English is more efficient for people to find answers from Google, stackoverflow and so on.</li>
+<li>English is in every corner of the programmers&rsquo; world, in the documents of python language, in the books of cutting-edge techniques and so on.</li>
+<li>The comments and programming variables are in English. When you are familiar with English, esp. some special terminologies, it&rsquo;s more possible for you to understand the comments, variables and therefore the codes.</li>
+</ul>
+<h2 id="how-this-post-will-be-organized">How this post will be organized?</h2>
+<p>Basically, I will organize the post centered in several crucial tasks:</p>
+<ul>
+<li>How to access files you want?</li>
+<li>How to run Matlab codes?</li>
+<li>How to submit a PBS job?</li>
+</ul>
+<p>These questions are under the conditions:</p>
+<ul>
+<li>There is no monitor (or screen) if not specified.</li>
+</ul>
+<p>Some concepts:</p>
+<ul>
+<li>shell: it is actually the command line tool you used in the Linux to interact with the whole system.</li>
+<li>bash: it is one kind of shell. If not specified, I refer shell to bash here. Both <code>bash</code> and <code>shell</code> are softwares.</li>
+<li>Ubuntu: A Linux system.</li>
+</ul>
+<p>Now, let&rsquo;s rock!</p>
+<h1 id="part-2-access-your-files">Part 2: Access your files</h1>
+<p>This is the very first question to every Linux user: <em>Where can I find my files?</em> or <em>How can I handle my files?</em>
+This question could include several parts. I will demonstrate them with comments (started with <code>#</code>). The exected shell commands are displayed with a <code>$</code> at the begining.</p>
+<pre><code class="language-shell">$ ls  # (l)i(s)t all files under current folder
+$ cd hello # (C)hange (D)irectory to 'hello' folder
+$ vim aa.txt # edit text file or any other files. `vim` is a software
+$ rm aa.txt # (R)e(M)ove file
+$ cp aa.txt bb.txt # (c)o(p)y from aa.txt to bb.txt
+$ man cp # open the manual of command `cp`, and press `q` to quit.
+$ cat aa.txt # print the content
+$ ssh jyhong@129.0.0.1 # log into server: `ssh &lt;username&gt;@&lt;server address or IP&gt;`
+</code></pre>
+<!-- To record terminal: https://asciinema.org/docs/embedding
+
+<script src="https://asciinema.org/a/MFy5RicpxMVrcFqfFvaEH8WgY.js" id="asciicast-MFy5RicpxMVrcFqfFvaEH8WgY" async></script> -->
+<h1 id="part-3-run-matlab-codes">Part 3: Run Matlab codes</h1>
+<p>There are two ways to do that. One is with your familiar window, while the other is simply a commandline tool.</p>
+<h2 id="run-locally-like">Run locally-like</h2>
+<p>You must be familiar with Matlab&rsquo;s Graphic User Interface (GUI). It could freak me out when I found I can do things with the familiar interface. But, soon, it turns out that it&rsquo;s unnecessary.
+The strategy is based on forwarding x-window. See <a href="#use-gui-software-remotely">Use GUI software remotely</a> for more information. Here are commands:</p>
+<pre><code class="language-shell">$ ssh -X ubri # '-X' means the remote GUI display will be forwarded to local.
+$ jyhong@ubri &gt; matlab # run the matlab
+</code></pre>
+<p>Then you should get into your familiar zone.
+If no GUI window appears, try one of these:</p>
+<ol>
+<li>Run Matlab using absolute path.</li>
+<li>Check the <code>~/.bashrc</code> file, if there is a setting of <code>matlab</code> to disable GUI, e.g., <code>matlab -nodisplay</code> will do that.</li>
+</ol>
+<h2 id="run-in-command-line">Run in command line</h2>
+<p>It is straightforward to run Matlab in command line. Just run <code>matlab</code>.
+If the command is not found, add below line to your <code>~/.bashrc</code></p>
+<pre><code class="language-bash">alias matlab=&quot;/opt/MATLAB/R2016a/bin/matlab -nodisplay -singleCompThread&quot;
+</code></pre>
+<p>which use the command <code>matlab</code> to represent the later long one.</p>
+<h1 id="part-4-submit-a-pbs-job">Part 4: Submit a PBS job</h1>
+<p>When you first log into the server, you could see some information about the job management sysetm, torque<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
+<p>Some common steps:</p>
+<ol>
+<li>Copy the <code>template.pbs</code> file: <code>cp template.pbs myjob.pbs</code></li>
+<li>Add your run command to the last line of the <code>pbs</code> file.</li>
+<li>Submit it:</li>
+</ol>
+<pre><code>qsub myjob.pbs
+</code></pre>
+<p>or</p>
+<pre><code>qsub -d `pwd` myjob.pbs
+</code></pre>
+<h1 id="part-5-useful-tools">Part 5: Useful tools</h1>
+<h2 id="use-gui-software-remotely">Use GUI software remotely</h2>
+<p>Basically, you can run any GUI software remotely after you log in with below comnand:</p>
+<pre><code>$ ssh -X urbi
+</code></pre>
+<p>Unless the remote system is not GUI-based. For example, the server version of Ubuntu. The operation is supported natively by most Linux desktop system. If you want to use it at Windows, try <a href="https://www.netsarang.com/products/xsh_key_features.html" target="_blank" rel="noopener">XShell</a> (See &lsquo;<em>Launch X Applications Through an SSH Tunnel</em>&rsquo; feature), which is a powerful tool for using <code>ssh</code>.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="http://bicmr.pku.edu.cn/~wenzw/pages/batch.html" target="_blank" rel="noopener">http://bicmr.pku.edu.cn/~wenzw/pages/batch.html</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="http://docs.adaptivecomputing.com/torque/4-0-2/Content/topics/commands/qsub.htm" target="_blank" rel="noopener">http://docs.adaptivecomputing.com/torque/4-0-2/Content/topics/commands/qsub.htm</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/linux/">Linux</a>
+  
+  <a class="badge badge-light" href="/tag/how-to/">How-to</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://zhuangdizhu.github.io/post/linux-rookie/&amp;text=Linux%20Rookie%20Book" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://zhuangdizhu.github.io/post/linux-rookie/&amp;t=Linux%20Rookie%20Book" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Linux%20Rookie%20Book&amp;body=https://zhuangdizhu.github.io/post/linux-rookie/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://zhuangdizhu.github.io/post/linux-rookie/&amp;title=Linux%20Rookie%20Book" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Linux%20Rookie%20Book%20https://zhuangdizhu.github.io/post/linux-rookie/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://zhuangdizhu.github.io/post/linux-rookie/&amp;title=Linux%20Rookie%20Book" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://zhuangdizhu.github.io/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu1b525bdcc36b53a73f5873a201f7a3f4_1744783_270x270_fill_q75_lanczos_center.JPG" alt="Zhuangdi Zhu"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://zhuangdizhu.github.io/">Zhuangdi Zhu</a></h5>
+      <h6 class="card-subtitle">Senior Data &amp; Applied Scientist</h6>
+      <p class="card-text">My research interests include data privacy and trustworthy machine learning.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:zhuangdizhu@gmail.com" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=eG_hZ9MAAAAJ" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/zhuangdi-zhu-9a4b26103/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/files/cv.pdf" >
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  <section id="comments">
+    
+<div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    
+    
+    
+  };
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+      return;
+    }
+    var d = document, s = d.createElement('script'); s.async = true;
+    s.src = 'https://' + "judyzhu-gitlab-io" + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  </section>
+  
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/post/2015-02-03-start-my-blog-with-jekyll-and-disqus/">Start my blog with Jekyll and disqus</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+  
+
+  
+  <p class="powered-by">
+    © 2023 Zhuangdi Zhu
+  </p>
+  
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+      <script id="dsq-count-scr" src="https://judyzhu-gitlab-io.disqus.com/count.js" async></script>
+    
+
+    
+    <script src="/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js"></script>
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.26bc5a5b73c468c9e767656a378ac5e3.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>

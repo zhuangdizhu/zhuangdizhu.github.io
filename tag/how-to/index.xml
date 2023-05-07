@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>How-to | Zhuangdi Zhu</title>
+    <link>https://zhuangdizhu.github.io/tag/how-to/</link>
+      <atom:link href="https://zhuangdizhu.github.io/tag/how-to/index.xml" rel="self" type="application/rss+xml" />
+    <description>How-to</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2023 Zhuangdi Zhu</copyright><lastBuildDate>Mon, 11 Jun 2018 18:11:46 +0800</lastBuildDate>
+    <image>
+      <url>https://zhuangdizhu.github.io/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_512x512_fill_lanczos_center_3.png</url>
+      <title>How-to</title>
+      <link>https://zhuangdizhu.github.io/tag/how-to/</link>
+    </image>
+    
+    <item>
+      <title>Linux Rookie Book</title>
+      <link>https://zhuangdizhu.github.io/post/linux-rookie/</link>
+      <pubDate>Mon, 11 Jun 2018 18:11:46 +0800</pubDate>
+      <guid>https://zhuangdizhu.github.io/post/linux-rookie/</guid>
+      <description>&lt;p&gt;As a MS student, I am going to leave my lab at USTC. With this post, I&amp;rsquo;d like to share my experiences on the Linux system, especially for those who are new to such a system.&lt;/p&gt;
+&lt;h1 id=&#34;part-1-introduction&#34;&gt;Part 1: Introduction&lt;/h1&gt;
+&lt;h2 id=&#34;for-whom-is-the-post-written&#34;&gt;For whom is the post written?&lt;/h2&gt;
+&lt;p&gt;The audiances are expected to be&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The first-year student for MSc of CS.&lt;/li&gt;
+&lt;li&gt;He/She is to do research on fields, including Software Developing, Maching Learning and related directions.&lt;/li&gt;
+&lt;li&gt;He/She eager to pay time to solve issues by themselves in the future.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In addition, it&amp;rsquo;s better to clarify who is not the potential audiances:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Who expect to find all solutions to their works on Linux.&lt;/em&gt; The space is limit so as not possible to do that.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Who expect to be a master of the problems introduced here.&lt;/em&gt; This is an small cookbook, not encyclopedia.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Most importantly, remember that I am just a student, but not a master in these fields. Thus, there is hich chance that I could be wrong.&lt;/p&gt;
+&lt;h2 id=&#34;why-english-rather-than-chinese&#34;&gt;Why English rather than Chinese?&lt;/h2&gt;
+&lt;p&gt;You may wonder why the post is written in English, while the readers are mostly speaking Chinese.
+This is just my opinion that:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;English is more efficient for people to find answers from Google, stackoverflow and so on.&lt;/li&gt;
+&lt;li&gt;English is in every corner of the programmers&amp;rsquo; world, in the documents of python language, in the books of cutting-edge techniques and so on.&lt;/li&gt;
+&lt;li&gt;The comments and programming variables are in English. When you are familiar with English, esp. some special terminologies, it&amp;rsquo;s more possible for you to understand the comments, variables and therefore the codes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;how-this-post-will-be-organized&#34;&gt;How this post will be organized?&lt;/h2&gt;
+&lt;p&gt;Basically, I will organize the post centered in several crucial tasks:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;How to access files you want?&lt;/li&gt;
+&lt;li&gt;How to run Matlab codes?&lt;/li&gt;
+&lt;li&gt;How to submit a PBS job?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These questions are under the conditions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;There is no monitor (or screen) if not specified.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Some concepts:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;shell: it is actually the command line tool you used in the Linux to interact with the whole system.&lt;/li&gt;
+&lt;li&gt;bash: it is one kind of shell. If not specified, I refer shell to bash here. Both &lt;code&gt;bash&lt;/code&gt; and &lt;code&gt;shell&lt;/code&gt; are softwares.&lt;/li&gt;
+&lt;li&gt;Ubuntu: A Linux system.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now, let&amp;rsquo;s rock!&lt;/p&gt;
+&lt;h1 id=&#34;part-2-access-your-files&#34;&gt;Part 2: Access your files&lt;/h1&gt;
+&lt;p&gt;This is the very first question to every Linux user: &lt;em&gt;Where can I find my files?&lt;/em&gt; or &lt;em&gt;How can I handle my files?&lt;/em&gt;
+This question could include several parts. I will demonstrate them with comments (started with &lt;code&gt;#&lt;/code&gt;). The exected shell commands are displayed with a &lt;code&gt;$&lt;/code&gt; at the begining.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;$ ls  # (l)i(s)t all files under current folder
+$ cd hello # (C)hange (D)irectory to &#39;hello&#39; folder
+$ vim aa.txt # edit text file or any other files. `vim` is a software
+$ rm aa.txt # (R)e(M)ove file
+$ cp aa.txt bb.txt # (c)o(p)y from aa.txt to bb.txt
+$ man cp # open the manual of command `cp`, and press `q` to quit.
+$ cat aa.txt # print the content
+$ ssh jyhong@129.0.0.1 # log into server: `ssh &amp;lt;username&amp;gt;@&amp;lt;server address or IP&amp;gt;`
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- To record terminal: https://asciinema.org/docs/embedding
+
+&lt;script src=&#34;https://asciinema.org/a/MFy5RicpxMVrcFqfFvaEH8WgY.js&#34; id=&#34;asciicast-MFy5RicpxMVrcFqfFvaEH8WgY&#34; async&gt;&lt;/script&gt; --&gt;
+&lt;h1 id=&#34;part-3-run-matlab-codes&#34;&gt;Part 3: Run Matlab codes&lt;/h1&gt;
+&lt;p&gt;There are two ways to do that. One is with your familiar window, while the other is simply a commandline tool.&lt;/p&gt;
+&lt;h2 id=&#34;run-locally-like&#34;&gt;Run locally-like&lt;/h2&gt;
+&lt;p&gt;You must be familiar with Matlab&amp;rsquo;s Graphic User Interface (GUI). It could freak me out when I found I can do things with the familiar interface. But, soon, it turns out that it&amp;rsquo;s unnecessary.
+The strategy is based on forwarding x-window. See &lt;a href=&#34;#use-gui-software-remotely&#34;&gt;Use GUI software remotely&lt;/a&gt; for more information. Here are commands:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;$ ssh -X ubri # &#39;-X&#39; means the remote GUI display will be forwarded to local.
+$ jyhong@ubri &amp;gt; matlab # run the matlab
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then you should get into your familiar zone.
+If no GUI window appears, try one of these:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Run Matlab using absolute path.&lt;/li&gt;
+&lt;li&gt;Check the &lt;code&gt;~/.bashrc&lt;/code&gt; file, if there is a setting of &lt;code&gt;matlab&lt;/code&gt; to disable GUI, e.g., &lt;code&gt;matlab -nodisplay&lt;/code&gt; will do that.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;run-in-command-line&#34;&gt;Run in command line&lt;/h2&gt;
+&lt;p&gt;It is straightforward to run Matlab in command line. Just run &lt;code&gt;matlab&lt;/code&gt;.
+If the command is not found, add below line to your &lt;code&gt;~/.bashrc&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;alias matlab=&amp;quot;/opt/MATLAB/R2016a/bin/matlab -nodisplay -singleCompThread&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;which use the command &lt;code&gt;matlab&lt;/code&gt; to represent the later long one.&lt;/p&gt;
+&lt;h1 id=&#34;part-4-submit-a-pbs-job&#34;&gt;Part 4: Submit a PBS job&lt;/h1&gt;
+&lt;p&gt;When you first log into the server, you could see some information about the job management sysetm, torque&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;Some common steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Copy the &lt;code&gt;template.pbs&lt;/code&gt; file: &lt;code&gt;cp template.pbs myjob.pbs&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Add your run command to the last line of the &lt;code&gt;pbs&lt;/code&gt; file.&lt;/li&gt;
+&lt;li&gt;Submit it:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;qsub myjob.pbs
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;or&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;qsub -d `pwd` myjob.pbs
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;part-5-useful-tools&#34;&gt;Part 5: Useful tools&lt;/h1&gt;
+&lt;h2 id=&#34;use-gui-software-remotely&#34;&gt;Use GUI software remotely&lt;/h2&gt;
+&lt;p&gt;Basically, you can run any GUI software remotely after you log in with below comnand:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ ssh -X urbi
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Unless the remote system is not GUI-based. For example, the server version of Ubuntu. The operation is supported natively by most Linux desktop system. If you want to use it at Windows, try &lt;a href=&#34;https://www.netsarang.com/products/xsh_key_features.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;XShell&lt;/a&gt; (See &amp;lsquo;&lt;em&gt;Launch X Applications Through an SSH Tunnel&lt;/em&gt;&amp;rsquo; feature), which is a powerful tool for using &lt;code&gt;ssh&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;http://bicmr.pku.edu.cn/~wenzw/pages/batch.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://bicmr.pku.edu.cn/~wenzw/pages/batch.html&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;http://docs.adaptivecomputing.com/torque/4-0-2/Content/topics/commands/qsub.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://docs.adaptivecomputing.com/torque/4-0-2/Content/topics/commands/qsub.htm&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Start my blog with Jekyll and disqus</title>
+      <link>https://zhuangdizhu.github.io/post/2015-02-03-start-my-blog-with-jekyll-and-disqus/</link>
+      <pubDate>Tue, 03 Feb 2015 18:11:46 +0800</pubDate>
+      <guid>https://zhuangdizhu.github.io/post/2015-02-03-start-my-blog-with-jekyll-and-disqus/</guid>
+      <description>&lt;!-- {% include JB/setup %} --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NOTE: this article is first posted in my &lt;a href=&#34;https://jyhong836.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;old website&lt;/a&gt;, which has be deprecated.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Jekyll is a powerful static website framework, which indead works for GitHub Pages. At the time I found it, I decided to apply it for my github.io as you can see.&lt;/p&gt;
+&lt;p&gt;Some useful webpages for install Jekyll at github.io:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://jekyllbootstrap.com/usage/jekyll-quick-start.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Host on GitHub in 3 Minutes&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Actually you need only to clone the Jekyll in your gihub.io, or just copy all file from Jekyll.&lt;/p&gt;
+&lt;p&gt;Jekyll advise you to clone the jekyll to local with your name and push it to your github.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git clone https://github.com/plusjade/jekyll-bootstrap.git USERNAME.github.io
+cd USERNAME.github.com 
+git remote set-url origin git@github.com:USERNAME/USERNAME.github.io
+git push origin master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;But if you have already create a repository at GitHub, you can also copy the files from jekyll to your repository.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git clone https://github.com/plusjade/jekyll-bootstrap.git jekyll-bootstrap
+cd jekyll-bootstrap
+cp -r ./* router/to/USERNAME.github.io
+cd router/to/USERNAME.github.io
+git push origin master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It also works honestly.&lt;/p&gt;
+&lt;p&gt;Another web about the Jekyll and GitHub: &lt;a href=&#34;http://www.developmentseed.org/blog/2011/09/09/jekyll-github-pages/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Using Jekyll and GitHub Pages for Our Site&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In the &lt;code&gt;_config.yml&lt;/code&gt;, you can add some tools:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Jekyll is easy to add Disqus for comments. You can visit &lt;a href=&#34;https://disqus.com/websites/?utm_source=hongblog&amp;amp;utm_medium=Disqus-Footer&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;DISQUS&lt;/a&gt; for more details.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You can also use Google Analytics to track your website.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

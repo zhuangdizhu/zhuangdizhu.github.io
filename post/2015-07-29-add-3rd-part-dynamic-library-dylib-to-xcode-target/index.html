@@ -1,0 +1,1496 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.2.0 for Hugo" />
+  
+
+  
+    <meta name="google-site-verification" content="Z-TOwJ6j5heN4dTEudyioNjVEEkgc9fMJOxhU0OYLqs" />
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Zhuangdi Zhu" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Dynamic library (with .dylib suffix at UNIX-like OS) is a kind of library discriminated from static library (with .a suffix). Static library will be linked at linking stage instantly after codes are compiled, before binary product output." />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://zhuangdizhu.github.io/post/2015-07-29-add-3rd-part-dynamic-library-dylib-to-xcode-target/" />
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.a809a4e79df6c8ad0fe4bd60dc874190.css" />
+
+  
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-59631745-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-59631745-2', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://zhuangdizhu.github.io/post/2015-07-29-add-3rd-part-dynamic-library-dylib-to-xcode-target/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary" />
+  
+  <meta property="og:site_name" content="Zhuangdi Zhu" />
+  <meta property="og:url" content="https://zhuangdizhu.github.io/post/2015-07-29-add-3rd-part-dynamic-library-dylib-to-xcode-target/" />
+  <meta property="og:title" content="Add 3rd part dynamic library (.dylib) to Xcode target | Zhuangdi Zhu" />
+  <meta property="og:description" content="Dynamic library (with .dylib suffix at UNIX-like OS) is a kind of library discriminated from static library (with .a suffix). Static library will be linked at linking stage instantly after codes are compiled, before binary product output." /><meta property="og:image" content="https://zhuangdizhu.github.io/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://zhuangdizhu.github.io/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2015-07-29T18:11:46&#43;08:00"
+      />
+    
+    <meta property="article:modified_time" content="2015-07-29T18:11:46&#43;08:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://zhuangdizhu.github.io/post/2015-07-29-add-3rd-part-dynamic-library-dylib-to-xcode-target/"
+  },
+  "headline": "Add 3rd part dynamic library (.dylib) to Xcode target",
+  
+  "datePublished": "2015-07-29T18:11:46+08:00",
+  "dateModified": "2015-07-29T18:11:46+08:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Zhuangdi Zhu"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Michigan Statue University",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://zhuangdizhu.github.io/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "Dynamic library (with .dylib suffix at UNIX-like OS) is a kind of library discriminated from static library (with .a suffix). Static library will be linked at linking stage instantly after codes are compiled, before binary product output."
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>Add 3rd part dynamic library (.dylib) to Xcode target | Zhuangdi Zhu</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="0959831b9d3a1c02caa95dde437051e3" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.4be02a3b391999348b0c7478778a0e4b.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Zhuangdi Zhu</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Zhuangdi Zhu</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#professional"><span>Professional Activities</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#service"><span>Services</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#teaching"><span>Teaching</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#experience"><span>Experiences</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#miscellaneous"><span>Miscellaneous</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Add 3rd part dynamic library (.dylib) to Xcode target</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jul 29, 2015
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    6 min read
+  </span>
+  
+
+  
+  
+  
+  
+  
+  
+    <span class="middot-divider"></span>
+    <a href="/post/2015-07-29-add-3rd-part-dynamic-library-dylib-to-xcode-target/#disqus_thread"></a>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/tech/">tech</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <!-- {% include JB/setup %} -->
+<p>Dynamic library (with .dylib suffix at UNIX-like OS) is a kind of library discriminated from static library (with .a suffix). Static library will be linked at linking stage instantly after codes are compiled, before binary product output. And instead library is loaded at runtime, I mean load but not link. Load means the executable file will search for binary library when they need it. That&rsquo;s why some app will announce you that it lack a lib when you double click them for running happily. In contrast, static library will compile these needed part into you app, so the user will not be bothered.</p>
+<h4 id="then-why-we-use-dynamic-library">Then why we use dynamic library?</h4>
+<p>That&rsquo;s file size! A static library is several times bigger than a same function dynamic library. For example the SDL lib at OS X, which is located at /usr/local/Cellar/sdl2/2.0.3/lib/  if you install it through Homebrew.</p>
+<pre><code class="language-bash">$ ls /usr/local/Cellar/sdl2/2.0.3/lib/ -lh
+-r--r--r-- 1 user admin 850K Jul 20 22:18 libSDL2-2.0.0.dylib
+-r--r--r-- 1 user admin 1.5M Oct 22  2014 libSDL2.a
+</code></pre>
+<p>There are two method to add 3rd-part dynamic library to a Xcode target:</p>
+<ul>
+<li>Install the library into your system</li>
+<li>Copy your library into your product.</li>
+</ul>
+<h3 id="method-1-install-the-library">Method 1: Install the library</h3>
+<p>For most library, 3rd part library can be installed into system, at <code>/usr/local/lib or /usr/lib</code>. Then just add header path to <code>Xcode target &gt; Build Setting</code>, if the header file is not be found by Xcode. Finally, link your library at <code>Xcode target &gt; Build Phase &gt; Linked Libraries and Frameworks</code>.</p>
+<p>However, this method doesn&rsquo;t allow your app user to use app freely, since it require the user to install the library too. That&rsquo;s terrible for an app.</p>
+<h3 id="method-2-copy-dylib-file-into-your-product">Method 2: Copy .dylib file into your product</h3>
+<p>So it&rsquo;s obvious that a better way to use dynamic library is bundle the .dylib with .app file. Path relative  yourself is better than relative to system.</p>
+<p>How the executable binary file inform system which and where library is needed?</p>
+<p>Since a program starts from its binary file, file is the only one from who system can get information about linked library. Or we can say the binary file is the bridge between developer and user&rsquo;s system, compiler and linker are the builders. So, we should ask the binary file for the answer directly with  otool provided by OS X.</p>
+<p>Assume I have a project named Vivi, output file Vivi.app . Vivi used two of my framework named ViviSwiften.framework and ViviInterface.framework , they are in the same project as Vivi. Although you run an App by double click it, but it&rsquo;s not a binary file indeed. The executable binary file is located at AppName.app/Contents/MacOS/AppName instead.</p>
+<p>Ask Vivi binary file:</p>
+<pre><code class="language-bash">$ otool -L Vivi.app/Contents/MacOS/Vivi 
+Vivi.app/Contents/MacOS/Vivi:
+    @rpath/ViviInterface.framework/Versions/A/ViviInterface (compatibility version 1.0.0, current version 1.0.0)
+    @rpath/ViviSwiften.framework/Versions/A/ViviSwiften (compatibility version 1.0.0, current version 1.0.0)
+    /usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1223.0.0)
+    /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit (compatibility version 45.0.0, current version 1387.1.0)
+    /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 1225.0.0)
+    /usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)
+    @rpath/libswiftAppKit.dylib (compatibility version 0.0.0, current version 0.0.0)
+    @rpath/libswiftCore.dylib (compatibility version 0.0.0, current version 0.0.0)
+    @rpath/libswiftCoreData.dylib (compatibility version 0.0.0, current version 0.0.0)
+    @rpath/libswiftCoreGraphics.dylib (compatibility version 0.0.0, current version 0.0.0)
+        ...
+</code></pre>
+<p>It seems that otool  print the list of path of all linked libraries and their version messages.</p>
+<p>Well, there is so many stuffs. Hey, I found there is my frameworks,  ViviSwiften.framework and ViviInterface.framework. Okay, I know <code>ViviInterface.framework/Versions/A/ViviInterface</code> is the path point to the binary file of the framework (Different from .app file, framework&rsquo;s binary file is located at FrameworkName.framework/Versions/A/FrameworkName commonly), but what the @rpath means.</p>
+<h4 id="whats-excutable_path-loader_path-and-rpath1-2-3">What&rsquo;s @excutable_path, @loader_path and @rpath?<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></h4>
+<!-- Reference: [OS X Man Page: dyld(1)](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/dyld.1.html)(this also can be found by running `man dyld` at OS X), [Run-Path Dependent Libraries](https://developer.apple.com/library/mac/documentation/DeveloperTools/Conceptual/DynamicLibraries/100-Articles/RunpathDependentLibraries.html). -->
+<p>The three variable is defined at runtime:</p>
+<ul>
+<li><strong>@executable_path</strong>, this always point to the product executable binary file path,  <code>AppName.app/Contents/MacOS/AppName</code>.</li>
+<li><strong>@loader_path</strong>, this is dependent on which is the loader. For example, my Vivi.app load the <code>ViviSwiften.framework</code>, then a dylib linked by ViviSwiften.framework could get two variable <code>@loader_path=/path/to/ViviSwiften.framework/Versions/A/</code>, and <code>@executable_path=/path/to/Vivi.app/Contents/MacOS/</code>.</li>
+<li><strong>@rpath</strong>, this is just a path stored some predefined path. You can set it at <code>Xcode target &gt; Build Setting &gt; Runpath Search Path</code>. Often there will include <code>@executable_path/../Frameworks</code> for an App target, <code>@executable_path/../Frameworks and @loader_path/Frameworks</code> for a Framework target, <code>@executable_path/../Frameworks</code> and <code>@loader_path/../Frameworks</code> for a Unit Test target.</li>
+</ul>
+<p>Now we know Vivi.app used ViviSwiften.framework and ViviInterface.framework created by myself, and other system frameworks or libraries. But there is no 3rd part dynamic libraries added by myself (the dylib linked in Vivi.app is auto added by Xcode). The libraries is libSwiften.3.0.dylib which is linked in ViviSwiften.framework. Let&rsquo;s ask ViviSwiften if that is true.</p>
+<pre><code class="language-bash">$ otool -L ViviSwiften.framework/Versions/A/ViviSwiften
+ViviSwiften.framework/Versions/A/ViviSwiften:
+    @rpath/ViviSwiften.framework/Versions/A/ViviSwiften (compatibility version 1.0.0, current version 1.0.0)
+    @loader_path/Frameworks/libSwiften.3.0.dylib (compatibility version 3.0.0, current version 3.0.0)
+    /System/Library/Frameworks/Security.framework/Versions/A/Security (compatibility version 1.0.0, current version 57301.0.0)
+    ...
+</code></pre>
+<p>You can see that ViviSwiften.framework used a 3rd part dynamic library libSwiften.dylib  with path <code>@loader_path/Frameworks/libSwiften.3.0.dylib</code>.</p>
+<h4 id="how-system-find-these-libraries-or-frameworks-vivi-example">How system find these libraries or frameworks? (Vivi example)</h4>
+<ol>
+<li>User double clicks to run Vivi.app.</li>
+<li>Vivi.app executes <code>Vivi.app/Contents/MacOS/Vivi</code>.</li>
+<li>Search for dynamic libraries and frameworks needed by Vivi.app.</li>
+<li>Found <code>@rpath/ViviSwiften.framework/Versions/A/ViviSwiften</code>, which is transferred to  <code>@executable_path/../Frameworks/ViviSwiften/</code>  then transferred to <code>Vivi.app/Contents/MacOS/Vivi/../Frameworks/ViviSwiften</code>.framework .</li>
+<li>Search for dynamic libraries and frameworks needed by <code>ViviSwiften.framework</code>.</li>
+<li>Found <code>@loader_path/Frameworks/libSwiften.3.0.dylib</code> which has been transferred to <code>ViviSwiften.framework/Version/A/Frameworks/libSwiften.3.0.dylib</code>.</li>
+</ol>
+<h4 id="how-these-messages-are-written-into-binary-file">How these messages are written into binary file?</h4>
+<p>Well, we know the messages are inside the binary file, but how they get into there? There are two hard woking builder: compiler and linker. Compiler will mark the needed symbols and pass to linker, Linker will find symbols in libraries you told it. Finally linker will write the needed libraries into executable binary file. If you provide a static library, linker will write the whole file into binary file. Or if you provide a dynamic library, only library path will be written into binary file.</p>
+<h4 id="where-does-linker-get-the-path-from">Where does linker get the path from?</h4>
+<p>Unfortunately the path is not provided by developer of the App but the 3rd part library developer. So you can not let Xcode use the path relative your product or use path provided by yourself.</p>
+<p>Let&rsquo;s review ViviSwiften.framework&rsquo;s answer to otool:</p>
+<pre><code class="language-bash">$ otool -L ViviSwiften.framework/Versions/A/ViviSwiften
+ViviSwiften.framework/Versions/A/ViviSwiften:
+    @rpath/ViviSwiften.framework/Versions/A/ViviSwiften (compatibility version 1.0.0, current version 1.0.0)
+    @loader_path/Frameworks/libSwiften.3.0.dylib (compatibility version 3.0.0, current version 3.0.0)
+        ...
+</code></pre>
+<p>We found the first line is the path to ViviSwiften itself. So&hellip;that&rsquo;s it.</p>
+<p>The path describing the self path is called install_name.</p>
+<p>The path provided by ViviSwiften.framework is the correct path as described above. But will the 3rd part library always provide correct path as we expected? No!</p>
+<h4 id="what-path-will-compiled-3rd-part-library-provide">What path will compiled 3rd part library provide?</h4>
+<p>There is two situations:</p>
+<ol>
+<li>You have installed the library with Homebrew or from source (like make install ). The library will provide path like: <code>/usr/lib/libxxx.dylib</code>, <code>/usr/local/lib/libxx.dylib</code>.</li>
+<li>You just compiled source with <code>./configure</code> &amp;&amp; make , then the library may provide path like: <code>libxx.dylib</code> without prefix.</li>
+</ol>
+<p>Both situation is not expected.</p>
+<h3 id="change-the-install_name-to-expected">Change the install_name to expected</h3>
+<p>OS X provide another tool named install_name_tool  for change install_name and linked lib install_name.</p>
+<pre><code class="language-bash"># change linked lib path
+$ install_name_tool -change old new bin_file
+# change the library install_name
+$ install_name_tool -id new_install_name bin_file
+</code></pre>
+<h3 id="the-whole-strategy">The whole strategy</h3>
+<p>As a conclusion, the strategy for adding 3rd part dynamic library into Xcode target is:</p>
+<ol>
+<li>Add library to Build Phase, and add header to search path. This guarantee no compile and link error will occur.</li>
+<li>Let Xcode copy .dylib file into product after compiled. Add &ldquo;New Copy Files Phase&rdquo;, name it &ldquo;Copy Libraries&rdquo; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-new-copy-phase">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="/img/post/new_copy_phase.jpg" alt="new copy phase" loading="lazy" data-zoomable width="60%" /></div>
+  </div><figcaption data-pre="Figure&nbsp;" data-post=":&nbsp;" class="numbered">
+      new copy phase
+    </figcaption></figure></li>
+<li>Set the &ldquo;Destination&rdquo; to &ldquo;Frameworks&rdquo;. Add your dylib here.link_dynamic_lib 
+<img src="/img/post/link_dynamic_lib.jpg" alt="link dynamic lib">
+</li>
+<li>Change install_name of library:
+<pre><code>$ install_name_tool -id @loader_path/Frameworks/libSwiften.3.0.dylib libSwiften.3.0.dylib
+</code></pre>
+</li>
+</ol>
+<p>That&rsquo;s all.</p>
+<h3 id="reference">Reference</h3>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="http://www.tanhao.me/pieces/1361.html/" target="_blank" rel="noopener">Build Settings中的变量@rpath,@loader_path,@executable_path.</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/dyld.1.html" target="_blank" rel="noopener">OS X Man Page: dyld(1)</a> – Apple Developer&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://developer.apple.com/library/mac/documentation/DeveloperTools/Conceptual/DynamicLibraries/100-Articles/RunpathDependentLibraries.html" target="_blank" rel="noopener">Run-Path Dependent Libraries</a> – Apple Developer&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/xcode/">Xcode</a>
+  
+  <a class="badge badge-light" href="/tag/os-x/">OS X</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://zhuangdizhu.github.io/post/2015-07-29-add-3rd-part-dynamic-library-dylib-to-xcode-target/&amp;text=Add%203rd%20part%20dynamic%20library%20%28.dylib%29%20to%20Xcode%20target" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://zhuangdizhu.github.io/post/2015-07-29-add-3rd-part-dynamic-library-dylib-to-xcode-target/&amp;t=Add%203rd%20part%20dynamic%20library%20%28.dylib%29%20to%20Xcode%20target" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Add%203rd%20part%20dynamic%20library%20%28.dylib%29%20to%20Xcode%20target&amp;body=https://zhuangdizhu.github.io/post/2015-07-29-add-3rd-part-dynamic-library-dylib-to-xcode-target/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://zhuangdizhu.github.io/post/2015-07-29-add-3rd-part-dynamic-library-dylib-to-xcode-target/&amp;title=Add%203rd%20part%20dynamic%20library%20%28.dylib%29%20to%20Xcode%20target" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Add%203rd%20part%20dynamic%20library%20%28.dylib%29%20to%20Xcode%20target%20https://zhuangdizhu.github.io/post/2015-07-29-add-3rd-part-dynamic-library-dylib-to-xcode-target/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://zhuangdizhu.github.io/post/2015-07-29-add-3rd-part-dynamic-library-dylib-to-xcode-target/&amp;title=Add%203rd%20part%20dynamic%20library%20%28.dylib%29%20to%20Xcode%20target" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://zhuangdizhu.github.io/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu1b525bdcc36b53a73f5873a201f7a3f4_1744783_270x270_fill_q75_lanczos_center.JPG" alt="Zhuangdi Zhu"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://zhuangdizhu.github.io/">Zhuangdi Zhu</a></h5>
+      <h6 class="card-subtitle">Senior Data &amp; Applied Scientist</h6>
+      <p class="card-text">My research interests include data privacy and trustworthy machine learning.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:zhuangdizhu@gmail.com" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=eG_hZ9MAAAAJ" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/zhuangdi-zhu-9a4b26103/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/files/cv.pdf" >
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  <section id="comments">
+    
+<div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    
+    
+    
+  };
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+      return;
+    }
+    var d = document, s = d.createElement('script'); s.async = true;
+    s.src = 'https://' + "judyzhu-gitlab-io" + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  </section>
+  
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/post/2015-08-04-nstableview-automatically-adjust-height-to-fit-cell-view/">NSTableView automatically adjust height to fit cell view</a></li>
+      
+      <li><a href="/post/2015-08-04-make-text-table-viewnstableview-auto-resize/">Make text table view(NSTableView) auto resize</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+  
+
+  
+  <p class="powered-by">
+    © 2023 Zhuangdi Zhu
+  </p>
+  
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+      <script id="dsq-count-scr" src="https://judyzhu-gitlab-io.disqus.com/count.js" async></script>
+    
+
+    
+    <script src="/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js"></script>
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.26bc5a5b73c468c9e767656a378ac5e3.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>

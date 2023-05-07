@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data-Heterogeneity | Zhuangdi Zhu</title>
+    <link>https://zhuangdizhu.github.io/tag/data-heterogeneity/</link>
+      <atom:link href="https://zhuangdizhu.github.io/tag/data-heterogeneity/index.xml" rel="self" type="application/rss+xml" />
+    <description>Data-Heterogeneity</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2023 Zhuangdi Zhu</copyright><lastBuildDate>Wed, 02 Jun 2021 13:08:20 +0800</lastBuildDate>
+    <image>
+      <url>https://zhuangdizhu.github.io/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_512x512_fill_lanczos_center_3.png</url>
+      <title>Data-Heterogeneity</title>
+      <link>https://zhuangdizhu.github.io/tag/data-heterogeneity/</link>
+    </image>
+    
+    <item>
+      <title>Data-Free Knowledge Distillation for Heterogeneous Federated Learning</title>
+      <link>https://zhuangdizhu.github.io/publication/fedgen/</link>
+      <pubDate>Wed, 02 Jun 2021 13:08:20 +0800</pubDate>
+      <guid>https://zhuangdizhu.github.io/publication/fedgen/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
