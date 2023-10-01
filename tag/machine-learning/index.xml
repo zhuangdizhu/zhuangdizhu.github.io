@@ -1,30 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Machine Learning | Zhuangdi Zhu</title>
-    <link>https://zhuangdizhu.github.io/tag/machine-learning/</link>
-      <atom:link href="https://zhuangdizhu.github.io/tag/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <title>Machine Learning | HaoHao Zhu</title>
+    <link>https://haohaozhu.github.io/tag/machine-learning/</link>
+      <atom:link href="https://haohaozhu.github.io/tag/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     <description>Machine Learning</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2023 Zhuangdi Zhu</copyright><lastBuildDate>Mon, 27 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2023 Haohao Zhu</copyright><lastBuildDate>Thu, 15 Nov 2018 23:24:41 -0500</lastBuildDate>
     <image>
-      <url>https://zhuangdizhu.github.io/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_512x512_fill_lanczos_center_3.png</url>
+      <url>https://haohaozhu.github.io/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_512x512_fill_lanczos_center_3.png</url>
       <title>Machine Learning</title>
-      <link>https://zhuangdizhu.github.io/tag/machine-learning/</link>
+      <link>https://haohaozhu.github.io/tag/machine-learning/</link>
     </image>
     
     <item>
-      <title>Federated Learning</title>
-      <link>https://zhuangdizhu.github.io/project/federated-learning/</link>
-      <pubDate>Mon, 27 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://zhuangdizhu.github.io/project/federated-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Evaluate Binary Classification with Keras</title>
-      <link>https://zhuangdizhu.github.io/post/keras-eval-binary-classification/</link>
+      <link>https://haohaozhu.github.io/post/keras-eval-binary-classification/</link>
       <pubDate>Thu, 15 Nov 2018 23:24:41 -0500</pubDate>
-      <guid>https://zhuangdizhu.github.io/post/keras-eval-binary-classification/</guid>
+      <guid>https://haohaozhu.github.io/post/keras-eval-binary-classification/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;keras.io&#34;&gt;Keras&lt;/a&gt; provides very convenient tools for fast protyping Machine Learning models, especially neural networks. You can pass &lt;a href=&#34;https://keras.io/metrics/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;metric functions&lt;/a&gt; when compiling a model, to evaluate the learnt models. However in the current version (after v2.0.0), Keras no longer provides widely used binary-classification metrics, e.g., recall, f1score, etc. The reason is clearly explained in &lt;a href=&#34;https://github.com/keras-team/keras/issues/5794#issuecomment-287641301&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;keras issue #5794&lt;/a&gt;. In this posts, we are going to dicuss a working-around to evaluate these metrics with Keras.&lt;/p&gt;
 &lt;!--more---&gt;
 &lt;h2 id=&#34;why-not-use-global-metrics&#34;&gt;Why not use global metrics&lt;/h2&gt;
@@ -76,22 +68,6 @@ However there is still no official metrics for recall, f1score etc.&lt;/p&gt;
 &lt;p&gt;If you have update Keras to &lt;code&gt;v2.1.6&lt;/code&gt; which supports &amp;lsquo;stateful metrics&amp;rsquo;, then you can try to customize some metric like the one in &lt;a href=&#34;https://stackoverflow.com/a/51412555/3503604&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;StackOverflow&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The best reference is the &lt;a href=&#34;https://github.com/keras-team/keras/blob/75a35032e194a2d065b0071a9e786adf6cee83ea/tests/keras/metrics_test.py#L127&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;BinaryTruePositives&lt;/a&gt; class provided by Keras test case.&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Differentially Private Learning</title>
-      <link>https://zhuangdizhu.github.io/project/private-learning/</link>
-      <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
-      <guid>https://zhuangdizhu.github.io/project/private-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Subspace Learning</title>
-      <link>https://zhuangdizhu.github.io/project/subspace-learning/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>https://zhuangdizhu.github.io/project/subspace-learning/</guid>
-      <description></description>
     </item>
     
   </channel>

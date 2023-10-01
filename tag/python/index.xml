@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Python | Zhuangdi Zhu</title>
-    <link>https://zhuangdizhu.github.io/tag/python/</link>
-      <atom:link href="https://zhuangdizhu.github.io/tag/python/index.xml" rel="self" type="application/rss+xml" />
+    <title>Python | HaoHao Zhu</title>
+    <link>https://haohaozhu.github.io/tag/python/</link>
+      <atom:link href="https://haohaozhu.github.io/tag/python/index.xml" rel="self" type="application/rss+xml" />
     <description>Python</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2023 Zhuangdi Zhu</copyright><lastBuildDate>Thu, 15 Nov 2018 11:47:06 -0500</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2023 Haohao Zhu</copyright><lastBuildDate>Thu, 15 Nov 2018 11:47:06 -0500</lastBuildDate>
     <image>
-      <url>https://zhuangdizhu.github.io/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_512x512_fill_lanczos_center_3.png</url>
+      <url>https://haohaozhu.github.io/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_512x512_fill_lanczos_center_3.png</url>
       <title>Python</title>
-      <link>https://zhuangdizhu.github.io/tag/python/</link>
+      <link>https://haohaozhu.github.io/tag/python/</link>
     </image>
     
     <item>
       <title>Python Decorator</title>
-      <link>https://zhuangdizhu.github.io/post/python-decorator/</link>
+      <link>https://haohaozhu.github.io/post/python-decorator/</link>
       <pubDate>Thu, 15 Nov 2018 11:47:06 -0500</pubDate>
-      <guid>https://zhuangdizhu.github.io/post/python-decorator/</guid>
+      <guid>https://haohaozhu.github.io/post/python-decorator/</guid>
       <description>&lt;p&gt;When refactoring a codes, we need to extract duplicated features from different methods or functions. A magic in Python 3 is to decorate the a striped basic functions with sharing features.&lt;/p&gt;
 &lt;h2 id=&#34;what-is-decorator&#34;&gt;What is decorator?&lt;/h2&gt;
 &lt;p&gt;A (almost) minimal demo:&lt;/p&gt;
