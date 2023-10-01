@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>How-to | HaoHao Zhu</title>
-    <link>https://haohaozhu.github.io/tag/how-to/</link>
-      <atom:link href="https://haohaozhu.github.io/tag/how-to/index.xml" rel="self" type="application/rss+xml" />
+    <title>How-to | Zhuangdi Zhu</title>
+    <link>https://zhuangdizhu.github.io/tag/how-to/</link>
+      <atom:link href="https://zhuangdizhu.github.io/tag/how-to/index.xml" rel="self" type="application/rss+xml" />
     <description>How-to</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2023 Haohao Zhu</copyright><lastBuildDate>Mon, 11 Jun 2018 18:11:46 +0800</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2023 Zhuangdi Zhu</copyright><lastBuildDate>Mon, 11 Jun 2018 18:11:46 +0800</lastBuildDate>
     <image>
-      <url>https://haohaozhu.github.io/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_512x512_fill_lanczos_center_3.png</url>
+      <url>https://zhuangdizhu.github.io/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_512x512_fill_lanczos_center_3.png</url>
       <title>How-to</title>
-      <link>https://haohaozhu.github.io/tag/how-to/</link>
+      <link>https://zhuangdizhu.github.io/tag/how-to/</link>
     </image>
     
     <item>
       <title>Linux Rookie Book</title>
-      <link>https://haohaozhu.github.io/post/linux-rookie/</link>
+      <link>https://zhuangdizhu.github.io/post/linux-rookie/</link>
       <pubDate>Mon, 11 Jun 2018 18:11:46 +0800</pubDate>
-      <guid>https://haohaozhu.github.io/post/linux-rookie/</guid>
+      <guid>https://zhuangdizhu.github.io/post/linux-rookie/</guid>
       <description>&lt;p&gt;As a MS student, I am going to leave my lab at USTC. With this post, I&amp;rsquo;d like to share my experiences on the Linux system, especially for those who are new to such a system.&lt;/p&gt;
 &lt;h1 id=&#34;part-1-introduction&#34;&gt;Part 1: Introduction&lt;/h1&gt;
 &lt;h2 id=&#34;for-whom-is-the-post-written&#34;&gt;For whom is the post written?&lt;/h2&gt;
@@ -127,9 +127,9 @@ If the command is not found, add below line to your &lt;code&gt;~/.bashrc&lt;/co
     
     <item>
       <title>Start my blog with Jekyll and disqus</title>
-      <link>https://haohaozhu.github.io/post/2015-02-03-start-my-blog-with-jekyll-and-disqus/</link>
+      <link>https://zhuangdizhu.github.io/post/2015-02-03-start-my-blog-with-jekyll-and-disqus/</link>
       <pubDate>Tue, 03 Feb 2015 18:11:46 +0800</pubDate>
-      <guid>https://haohaozhu.github.io/post/2015-02-03-start-my-blog-with-jekyll-and-disqus/</guid>
+      <guid>https://zhuangdizhu.github.io/post/2015-02-03-start-my-blog-with-jekyll-and-disqus/</guid>
       <description>&lt;!-- {% include JB/setup %} --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;NOTE: this article is first posted in my &lt;a href=&#34;https://jyhong836.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;old website&lt;/a&gt;, which has be deprecated.&lt;/p&gt;

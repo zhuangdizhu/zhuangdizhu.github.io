@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags | HaoHao Zhu</title>
-    <link>https://haohaozhu.github.io/tags/</link>
-      <atom:link href="https://haohaozhu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <title>Tags | Zhuangdi Zhu</title>
+    <link>https://zhuangdizhu.github.io/tags/</link>
+      <atom:link href="https://zhuangdizhu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2023 Haohao Zhu</copyright><lastBuildDate>Sun, 01 Oct 2023 13:08:20 +0800</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2023 Zhuangdi Zhu</copyright><lastBuildDate>Sat, 23 Sep 2023 13:08:20 +0800</lastBuildDate>
     <image>
-      <url>https://haohaozhu.github.io/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_512x512_fill_lanczos_center_3.png</url>
+      <url>https://zhuangdizhu.github.io/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_512x512_fill_lanczos_center_3.png</url>
       <title>Tags</title>
-      <link>https://haohaozhu.github.io/tags/</link>
+      <link>https://zhuangdizhu.github.io/tags/</link>
     </image>
     
   </channel>
