@@ -31,10 +31,10 @@
   
     
   
-  <meta name="description" content="As a MS student, I am going to leave my lab at USTC. With this post, I&rsquo;d like to share my experiences on the Linux system, especially for those who are new to such a system." />
+  <meta name="description" content="Unsupervised Domain Adaptation (UDA) provides a promising solution for learning without supervision, which transfers knowledge from relevant source domains with accessible labeled training data. Existing UDA solutions hinge on clean training data with a short-tail distribution from the source domain, which can be fragile when the source domain data is corrupted either inherently or via adversarial attacks. In this work, we propose an effective framework to address the challenges of UDA from corrupted source domains in a principled manner. Specifically, we perform knowledge ensemble from multiple domain-invariant models that are learned on random partitions of training data. To further address the distribution shift from the source to the target domain, we refine each of the learned models via mutual information maximization, which adaptively obtains the predictive information of the target domain with high confidence. Extensive empirical studies demonstrate that the proposed approach is robust against various types of poisoned data attacks while achieving high asymptotic performance on the target domain." />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://zhuangdizhu.github.io/post/linux-rookie/" />
+  <link rel="alternate" hreflang="en-us" href="https://zhuangdizhu.github.io/publication/ruda/" />
 
   
 
@@ -313,7 +313,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://zhuangdizhu.github.io/post/linux-rookie/" />
+  <link rel="canonical" href="https://zhuangdizhu.github.io/publication/ruda/" />
 
   
   
@@ -330,18 +330,18 @@
   <meta property="twitter:card" content="summary" />
   
   <meta property="og:site_name" content="Zhuangdi Zhu" />
-  <meta property="og:url" content="https://zhuangdizhu.github.io/post/linux-rookie/" />
-  <meta property="og:title" content="Linux Rookie Book | Zhuangdi Zhu" />
-  <meta property="og:description" content="As a MS student, I am going to leave my lab at USTC. With this post, I&rsquo;d like to share my experiences on the Linux system, especially for those who are new to such a system." /><meta property="og:image" content="https://zhuangdizhu.github.io/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:url" content="https://zhuangdizhu.github.io/publication/ruda/" />
+  <meta property="og:title" content="Robust Unsupervised Domain Adaptation from A Corrupted Source | Zhuangdi Zhu" />
+  <meta property="og:description" content="Unsupervised Domain Adaptation (UDA) provides a promising solution for learning without supervision, which transfers knowledge from relevant source domains with accessible labeled training data. Existing UDA solutions hinge on clean training data with a short-tail distribution from the source domain, which can be fragile when the source domain data is corrupted either inherently or via adversarial attacks. In this work, we propose an effective framework to address the challenges of UDA from corrupted source domains in a principled manner. Specifically, we perform knowledge ensemble from multiple domain-invariant models that are learned on random partitions of training data. To further address the distribution shift from the source to the target domain, we refine each of the learned models via mutual information maximization, which adaptively obtains the predictive information of the target domain with high confidence. Extensive empirical studies demonstrate that the proposed approach is robust against various types of poisoned data attacks while achieving high asymptotic performance on the target domain." /><meta property="og:image" content="https://zhuangdizhu.github.io/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://zhuangdizhu.github.io/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
       <meta
         property="article:published_time"
-        content="2018-06-11T18:11:46&#43;08:00"
+        content="2022-11-14T13:08:20&#43;08:00"
       />
     
-    <meta property="article:modified_time" content="2018-06-11T18:11:46&#43;08:00">
+    <meta property="article:modified_time" content="2022-11-14T13:08:20&#43;08:00">
   
 
   
@@ -353,8 +353,6 @@
 
 
 
-
-  
 
 
 
@@ -362,19 +360,19 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BlogPosting",
+  "@type": "Article",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://zhuangdizhu.github.io/post/linux-rookie/"
+    "@id": "https://zhuangdizhu.github.io/publication/ruda/"
   },
-  "headline": "Linux Rookie Book",
+  "headline": "Robust Unsupervised Domain Adaptation from A Corrupted Source",
   
-  "datePublished": "2018-06-11T18:11:46+08:00",
-  "dateModified": "2018-06-11T18:11:46+08:00",
+  "datePublished": "2022-11-14T13:08:20+08:00",
+  "dateModified": "2022-11-14T13:08:20+08:00",
   
   "author": {
     "@type": "Person",
-    "name": "Zhuangdi Zhu"
+    "name": "Shuyang Yu"
   },
   
   "publisher": {
@@ -385,7 +383,7 @@
       "url": "https://zhuangdizhu.github.io/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_192x192_fill_lanczos_center_3.png"
     }
   },
-  "description": "\u003cp\u003eAs a MS student, I am going to leave my lab at USTC. With this post, I\u0026rsquo;d like to share my experiences on the Linux system, especially for those who are new to such a system.\u003c/p\u003e"
+  "description": "Unsupervised Domain Adaptation (UDA) provides a promising solution for learning without supervision, which transfers knowledge from relevant source domains with accessible labeled training data. Existing UDA solutions hinge on clean training data with a short-tail distribution from the source domain, which can be fragile when the source domain data is corrupted either inherently or via adversarial attacks. In this work, we propose an effective framework to address the challenges of UDA from corrupted source domains in a principled manner. Specifically, we perform knowledge ensemble from multiple domain-invariant models that are learned on random partitions of training data. To further address the distribution shift from the source to the target domain, we refine each of the learned models via mutual information maximization, which adaptively obtains the predictive information of the target domain with high confidence. Extensive empirical studies demonstrate that the proposed approach is robust against various types of poisoned data attacks while achieving high asymptotic performance on the target domain."
 }
 </script>
 
@@ -401,11 +399,11 @@
 
 
 
-  <title>Linux Rookie Book | Zhuangdi Zhu</title>
+  <title>Robust Unsupervised Domain Adaptation from A Corrupted Source | Zhuangdi Zhu</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="77b619f0ee8fbdc764f88005ceb6e68b" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="4b5711f0fb9d27735fc69ee472f77c3c" >
 
   
   
@@ -817,7 +815,16 @@
   </div>
 
   <div class="page-body">
-    <article class="article">
+    
+
+
+
+
+
+
+
+
+<div class="pub">
 
   
 
@@ -838,7 +845,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>Linux Rookie Book</h1>
+  <h1>Robust Unsupervised Domain Adaptation from A Corrupted Source</h1>
 
   
 
@@ -850,6 +857,20 @@
 
   
   
+  
+  
+  <div>
+    
+
+  <span >
+      Shuyang Yu</span>, <span class="author-highlighted">
+      Zhuangdi Zhu</span>, <span >
+      Boyang Liu</span>, <span >
+      Anil K. Jain</span>, <span >
+      Jiayu Zhou</span>
+  </div>
+  
+  
 
   
   <span class="article-date">
@@ -857,18 +878,13 @@
     
       
     
-    Jun 11, 2018
+    November 2022
   </span>
   
 
   
 
   
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    4 min read
-  </span>
-  
 
   
   
@@ -876,15 +892,8 @@
   
   
   
-    <span class="middot-divider"></span>
-    <a href="/post/linux-rookie/#disqus_thread"></a>
-  
 
   
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/category/how-to/">How-to</a></span>
   
 
 </div>
@@ -893,6 +902,45 @@
 
 
 
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary btn-page-header" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10097501/pdf/nihms-1888097.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
 
 
   
@@ -902,114 +950,47 @@
 
   <div class="article-container">
 
-    <div class="article-style">
-      <p>As a MS student, I am going to leave my lab at USTC. With this post, I&rsquo;d like to share my experiences on the Linux system, especially for those who are new to such a system.</p>
-<h1 id="part-1-introduction">Part 1: Introduction</h1>
-<h2 id="for-whom-is-the-post-written">For whom is the post written?</h2>
-<p>The audiances are expected to be</p>
-<ul>
-<li>The first-year student for MSc of CS.</li>
-<li>He/She is to do research on fields, including Software Developing, Maching Learning and related directions.</li>
-<li>He/She eager to pay time to solve issues by themselves in the future.</li>
-</ul>
-<p>In addition, it&rsquo;s better to clarify who is not the potential audiances:</p>
-<ul>
-<li><em>Who expect to find all solutions to their works on Linux.</em> The space is limit so as not possible to do that.</li>
-<li><em>Who expect to be a master of the problems introduced here.</em> This is an small cookbook, not encyclopedia.</li>
-</ul>
-<p>Most importantly, remember that I am just a student, but not a master in these fields. Thus, there is hich chance that I could be wrong.</p>
-<h2 id="why-english-rather-than-chinese">Why English rather than Chinese?</h2>
-<p>You may wonder why the post is written in English, while the readers are mostly speaking Chinese.
-This is just my opinion that:</p>
-<ul>
-<li>English is more efficient for people to find answers from Google, stackoverflow and so on.</li>
-<li>English is in every corner of the programmers&rsquo; world, in the documents of python language, in the books of cutting-edge techniques and so on.</li>
-<li>The comments and programming variables are in English. When you are familiar with English, esp. some special terminologies, it&rsquo;s more possible for you to understand the comments, variables and therefore the codes.</li>
-</ul>
-<h2 id="how-this-post-will-be-organized">How this post will be organized?</h2>
-<p>Basically, I will organize the post centered in several crucial tasks:</p>
-<ul>
-<li>How to access files you want?</li>
-<li>How to run Matlab codes?</li>
-<li>How to submit a PBS job?</li>
-</ul>
-<p>These questions are under the conditions:</p>
-<ul>
-<li>There is no monitor (or screen) if not specified.</li>
-</ul>
-<p>Some concepts:</p>
-<ul>
-<li>shell: it is actually the command line tool you used in the Linux to interact with the whole system.</li>
-<li>bash: it is one kind of shell. If not specified, I refer shell to bash here. Both <code>bash</code> and <code>shell</code> are softwares.</li>
-<li>Ubuntu: A Linux system.</li>
-</ul>
-<p>Now, let&rsquo;s rock!</p>
-<h1 id="part-2-access-your-files">Part 2: Access your files</h1>
-<p>This is the very first question to every Linux user: <em>Where can I find my files?</em> or <em>How can I handle my files?</em>
-This question could include several parts. I will demonstrate them with comments (started with <code>#</code>). The exected shell commands are displayed with a <code>$</code> at the begining.</p>
-<pre><code class="language-shell">$ ls  # (l)i(s)t all files under current folder
-$ cd hello # (C)hange (D)irectory to 'hello' folder
-$ vim aa.txt # edit text file or any other files. `vim` is a software
-$ rm aa.txt # (R)e(M)ove file
-$ cp aa.txt bb.txt # (c)o(p)y from aa.txt to bb.txt
-$ man cp # open the manual of command `cp`, and press `q` to quit.
-$ cat aa.txt # print the content
-$ ssh jyhong@129.0.0.1 # log into server: `ssh &lt;username&gt;@&lt;server address or IP&gt;`
-</code></pre>
-<!-- To record terminal: https://asciinema.org/docs/embedding
+    
+    <h3>Abstract</h3>
+    <p class="pub-abstract">Unsupervised Domain Adaptation (UDA) provides a promising solution for learning without supervision, which transfers knowledge from relevant source domains with accessible labeled training data. Existing UDA solutions hinge on clean training data with a short-tail distribution from the source domain, which can be fragile when the source domain data is corrupted either inherently or via adversarial attacks. In this work, we propose an effective framework to address the challenges of UDA from corrupted source domains in a principled manner. Specifically, we perform knowledge ensemble from multiple domain-invariant models that are learned on random partitions of training data. To further address the distribution shift from the source to the target domain, we refine each of the learned models via mutual information maximization, which adaptively obtains the predictive information of the target domain with high confidence. Extensive empirical studies demonstrate that the proposed approach is robust against various types of poisoned data attacks while achieving high asymptotic performance on the target domain.</p>
+    
 
-<script src="https://asciinema.org/a/MFy5RicpxMVrcFqfFvaEH8WgY.js" id="asciicast-MFy5RicpxMVrcFqfFvaEH8WgY" async></script> -->
-<h1 id="part-3-run-matlab-codes">Part 3: Run Matlab codes</h1>
-<p>There are two ways to do that. One is with your familiar window, while the other is simply a commandline tool.</p>
-<h2 id="run-locally-like">Run locally-like</h2>
-<p>You must be familiar with Matlab&rsquo;s Graphic User Interface (GUI). It could freak me out when I found I can do things with the familiar interface. But, soon, it turns out that it&rsquo;s unnecessary.
-The strategy is based on forwarding x-window. See <a href="#use-gui-software-remotely">Use GUI software remotely</a> for more information. Here are commands:</p>
-<pre><code class="language-shell">$ ssh -X ubri # '-X' means the remote GUI display will be forwarded to local.
-$ jyhong@ubri &gt; matlab # run the matlab
-</code></pre>
-<p>Then you should get into your familiar zone.
-If no GUI window appears, try one of these:</p>
-<ol>
-<li>Run Matlab using absolute path.</li>
-<li>Check the <code>~/.bashrc</code> file, if there is a setting of <code>matlab</code> to disable GUI, e.g., <code>matlab -nodisplay</code> will do that.</li>
-</ol>
-<h2 id="run-in-command-line">Run in command line</h2>
-<p>It is straightforward to run Matlab in command line. Just run <code>matlab</code>.
-If the command is not found, add below line to your <code>~/.bashrc</code></p>
-<pre><code class="language-bash">alias matlab=&quot;/opt/MATLAB/R2016a/bin/matlab -nodisplay -singleCompThread&quot;
-</code></pre>
-<p>which use the command <code>matlab</code> to represent the later long one.</p>
-<h1 id="part-4-submit-a-pbs-job">Part 4: Submit a PBS job</h1>
-<p>When you first log into the server, you could see some information about the job management sysetm, torque<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
-<p>Some common steps:</p>
-<ol>
-<li>Copy the <code>template.pbs</code> file: <code>cp template.pbs myjob.pbs</code></li>
-<li>Add your run command to the last line of the <code>pbs</code> file.</li>
-<li>Submit it:</li>
-</ol>
-<pre><code>qsub myjob.pbs
-</code></pre>
-<p>or</p>
-<pre><code>qsub -d `pwd` myjob.pbs
-</code></pre>
-<h1 id="part-5-useful-tools">Part 5: Useful tools</h1>
-<h2 id="use-gui-software-remotely">Use GUI software remotely</h2>
-<p>Basically, you can run any GUI software remotely after you log in with below comnand:</p>
-<pre><code>$ ssh -X urbi
-</code></pre>
-<p>Unless the remote system is not GUI-based. For example, the server version of Ubuntu. The operation is supported natively by most Linux desktop system. If you want to use it at Windows, try <a href="https://www.netsarang.com/products/xsh_key_features.html" target="_blank" rel="noopener">XShell</a> (See &lsquo;<em>Launch X Applications Through an SSH Tunnel</em>&rsquo; feature), which is a powerful tool for using <code>ssh</code>.</p>
-<div class="footnotes" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn:1">
-<p><a href="http://bicmr.pku.edu.cn/~wenzw/pages/batch.html" target="_blank" rel="noopener">http://bicmr.pku.edu.cn/~wenzw/pages/batch.html</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:2">
-<p><a href="http://docs.adaptivecomputing.com/torque/4-0-2/Content/topics/commands/qsub.htm" target="_blank" rel="noopener">http://docs.adaptivecomputing.com/torque/4-0-2/Content/topics/commands/qsub.htm</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-</ol>
-</div>
+    
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Type</div>
+          <div class="col-12 col-md-9">
+            <a href="/publication/#1">
+              Conference paper
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
     </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Publication</div>
+          <div class="col-12 col-md-9">2022 IEEE International Conference on Data Mining</div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    <div class="space-below"></div>
+
+    <div class="article-style"></div>
 
     
 
@@ -1020,9 +1001,11 @@ If the command is not found, add below line to your <code>~/.bashrc</code></p>
 
 <div class="article-tags">
   
-  <a class="badge badge-light" href="/tag/linux/">Linux</a>
+  <a class="badge badge-light" href="/tag/unsupervised-domain-adaptation/">Unsupervised Domain Adaptation</a>
   
-  <a class="badge badge-light" href="/tag/how-to/">How-to</a>
+  <a class="badge badge-light" href="/tag/robust-learning/">Robust Learning</a>
+  
+  <a class="badge badge-light" href="/tag/poison-data-attack/">Poison Data Attack</a>
   
 </div>
 
@@ -1039,7 +1022,7 @@ If the command is not found, add below line to your <code>~/.bashrc</code></p>
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://zhuangdizhu.github.io/post/linux-rookie/&amp;text=Linux%20Rookie%20Book" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://zhuangdizhu.github.io/publication/ruda/&amp;text=Robust%20Unsupervised%20Domain%20Adaptation%20from%20A%20Corrupted%20Source" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -1052,7 +1035,7 @@ If the command is not found, add below line to your <code>~/.bashrc</code></p>
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://zhuangdizhu.github.io/post/linux-rookie/&amp;t=Linux%20Rookie%20Book" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://zhuangdizhu.github.io/publication/ruda/&amp;t=Robust%20Unsupervised%20Domain%20Adaptation%20from%20A%20Corrupted%20Source" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -1065,7 +1048,7 @@ If the command is not found, add below line to your <code>~/.bashrc</code></p>
       
       
       <li>
-        <a href="mailto:?subject=Linux%20Rookie%20Book&amp;body=https://zhuangdizhu.github.io/post/linux-rookie/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Robust%20Unsupervised%20Domain%20Adaptation%20from%20A%20Corrupted%20Source&amp;body=https://zhuangdizhu.github.io/publication/ruda/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -1078,7 +1061,7 @@ If the command is not found, add below line to your <code>~/.bashrc</code></p>
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://zhuangdizhu.github.io/post/linux-rookie/&amp;title=Linux%20Rookie%20Book" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://zhuangdizhu.github.io/publication/ruda/&amp;title=Robust%20Unsupervised%20Domain%20Adaptation%20from%20A%20Corrupted%20Source" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -1091,7 +1074,7 @@ If the command is not found, add below line to your <code>~/.bashrc</code></p>
       
       
       <li>
-        <a href="whatsapp://send?text=Linux%20Rookie%20Book%20https://zhuangdizhu.github.io/post/linux-rookie/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=Robust%20Unsupervised%20Domain%20Adaptation%20from%20A%20Corrupted%20Source%20https://zhuangdizhu.github.io/publication/ruda/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -1104,7 +1087,7 @@ If the command is not found, add below line to your <code>~/.bashrc</code></p>
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://zhuangdizhu.github.io/post/linux-rookie/&amp;title=Linux%20Rookie%20Book" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://zhuangdizhu.github.io/publication/ruda/&amp;title=Robust%20Unsupervised%20Domain%20Adaptation%20from%20A%20Corrupted%20Source" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -1124,6 +1107,13 @@ If the command is not found, add below line to your <code>~/.bashrc</code></p>
 
   
   
+    
+
+
+
+
+  
+    
 
 
 
@@ -1143,7 +1133,7 @@ If the command is not found, add below line to your <code>~/.bashrc</code></p>
     <div class="media-body">
       <h5 class="card-title"><a href="https://zhuangdizhu.github.io/">Zhuangdi Zhu</a></h5>
       <h6 class="card-subtitle">Senior Data &amp; Applied Scientist</h6>
-      <p class="card-text">My research interests include data privacy and trustworthy machine learning.</p>
+      <p class="card-text">My research interests include federated learning, reinforcement learning, knowledge transfer, data privacy, and trustworthy machine learning.</p>
       <ul class="network-icon" aria-hidden="true">
   
     
@@ -1214,47 +1204,40 @@ If the command is not found, add below line to your <code>~/.bashrc</code></p>
   </div>
 
 
-
-
-
-
-
-
-
   
-  
-  
-
-  
-  
-  
-
-  
-  <section id="comments">
     
-<div id="disqus_thread"></div>
-<script>
-  var disqus_config = function () {
-    
-    
-    
-  };
-  (function() {
-    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-      document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-      return;
-    }
-    var d = document, s = d.createElement('script'); s.async = true;
-    s.src = 'https://' + "judyzhu-gitlab-io" + '.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-  })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
-  </section>
+
+
+  
+    
+
+
+
+
+  
+    
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
   
 
 
@@ -1265,15 +1248,6 @@ If the command is not found, add below line to your <code>~/.bashrc</code></p>
 
 
   
-  
-  <div class="article-widget content-widget-hr">
-    <h3>Related</h3>
-    <ul>
-      
-      <li><a href="/post/2015-02-03-start-my-blog-with-jekyll-and-disqus/">Start my blog with Jekyll and disqus</a></li>
-      
-    </ul>
-  </div>
   
 
 
@@ -1281,7 +1255,7 @@ If the command is not found, add below line to your <code>~/.bashrc</code></p>
 
 
   </div>
-</article>
+</div>
   </div>
 
   <div class="page-footer">

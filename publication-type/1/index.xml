@@ -5,12 +5,20 @@
     <link>https://zhuangdizhu.github.io/publication-type/1/</link>
       <atom:link href="https://zhuangdizhu.github.io/publication-type/1/index.xml" rel="self" type="application/rss+xml" />
     <description>1</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2023 Zhuangdi Zhu</copyright><lastBuildDate>Thu, 02 Jun 2022 13:08:20 +0800</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2023 Zhuangdi Zhu</copyright><lastBuildDate>Mon, 14 Nov 2022 13:08:20 +0800</lastBuildDate>
     <image>
       <url>https://zhuangdizhu.github.io/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_512x512_fill_lanczos_center_3.png</url>
       <title>1</title>
       <link>https://zhuangdizhu.github.io/publication-type/1/</link>
     </image>
+    
+    <item>
+      <title>Robust Unsupervised Domain Adaptation from A Corrupted Source</title>
+      <link>https://zhuangdizhu.github.io/publication/ruda/</link>
+      <pubDate>Mon, 14 Nov 2022 13:08:20 +0800</pubDate>
+      <guid>https://zhuangdizhu.github.io/publication/ruda/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Resilient and Communication Efficient Learning for Heterogeneous Federated Systems</title>

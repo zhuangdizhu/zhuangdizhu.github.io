@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Reinforcement learning | Zhuangdi Zhu</title>
-    <link>https://zhuangdizhu.github.io/tag/reinforcement-learning/</link>
-      <atom:link href="https://zhuangdizhu.github.io/tag/reinforcement-learning/index.xml" rel="self" type="application/rss+xml" />
-    <description>Reinforcement learning</description>
+    <title>Survey | Zhuangdi Zhu</title>
+    <link>https://zhuangdizhu.github.io/tag/survey/</link>
+      <atom:link href="https://zhuangdizhu.github.io/tag/survey/index.xml" rel="self" type="application/rss+xml" />
+    <description>Survey</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2023 Zhuangdi Zhu</copyright><lastBuildDate>Sat, 23 Sep 2023 13:08:20 +0800</lastBuildDate>
     <image>
       <url>https://zhuangdizhu.github.io/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_512x512_fill_lanczos_center_3.png</url>
-      <title>Reinforcement learning</title>
-      <link>https://zhuangdizhu.github.io/tag/reinforcement-learning/</link>
+      <title>Survey</title>
+      <link>https://zhuangdizhu.github.io/tag/survey/</link>
     </image>
     
     <item>
@@ -17,14 +17,6 @@
       <link>https://zhuangdizhu.github.io/publication/rlsurvey/</link>
       <pubDate>Sat, 23 Sep 2023 13:08:20 +0800</pubDate>
       <guid>https://zhuangdizhu.github.io/publication/rlsurvey/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Off-Policy Imitation Learning from Observations</title>
-      <link>https://zhuangdizhu.github.io/publication/opolo/</link>
-      <pubDate>Tue, 02 Jun 2020 13:08:20 +0800</pubDate>
-      <guid>https://zhuangdizhu.github.io/publication/opolo/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Poison Data Attack | Zhuangdi Zhu</title>
+    <link>https://zhuangdizhu.github.io/tag/poison-data-attack/</link>
+      <atom:link href="https://zhuangdizhu.github.io/tag/poison-data-attack/index.xml" rel="self" type="application/rss+xml" />
+    <description>Poison Data Attack</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2023 Zhuangdi Zhu</copyright><lastBuildDate>Mon, 14 Nov 2022 13:08:20 +0800</lastBuildDate>
+    <image>
+      <url>https://zhuangdizhu.github.io/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_512x512_fill_lanczos_center_3.png</url>
+      <title>Poison Data Attack</title>
+      <link>https://zhuangdizhu.github.io/tag/poison-data-attack/</link>
+    </image>
+    
+    <item>
+      <title>Robust Unsupervised Domain Adaptation from A Corrupted Source</title>
+      <link>https://zhuangdizhu.github.io/publication/ruda/</link>
+      <pubDate>Mon, 14 Nov 2022 13:08:20 +0800</pubDate>
+      <guid>https://zhuangdizhu.github.io/publication/ruda/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
