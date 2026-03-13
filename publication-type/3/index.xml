@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>3 | Zhuangdi Zhu</title>
+    <link>https://zhuangdizhu.github.io/publication-type/3/</link>
+      <atom:link href="https://zhuangdizhu.github.io/publication-type/3/index.xml" rel="self" type="application/rss+xml" />
+    <description>3</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2026 Zhuangdi Zhu</copyright><lastBuildDate>Mon, 02 Feb 2026 21:23:54 +0000</lastBuildDate>
+    <image>
+      <url>https://zhuangdizhu.github.io/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_512x512_fill_lanczos_center_3.png</url>
+      <title>3</title>
+      <link>https://zhuangdizhu.github.io/publication-type/3/</link>
+    </image>
+    
+    <item>
+      <title>CATNIP: LLM Unlearning via Calibrated and Tokenized Negative Preference Alignment</title>
+      <link>https://zhuangdizhu.github.io/publication/catnip/</link>
+      <pubDate>Mon, 02 Feb 2026 21:23:54 +0000</pubDate>
+      <guid>https://zhuangdizhu.github.io/publication/catnip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DUET: Distilled LLM Unlearning from an Efficiently Contextualized Teacher</title>
+      <link>https://zhuangdizhu.github.io/publication/duet/</link>
+      <pubDate>Thu, 29 Jan 2026 05:32:35 +0000</pubDate>
+      <guid>https://zhuangdizhu.github.io/publication/duet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hierarchical Federated Unlearning for Large Language Models</title>
+      <link>https://zhuangdizhu.github.io/publication/hierarchical-federated-unlearning/</link>
+      <pubDate>Sun, 19 Oct 2025 04:24:51 +0000</pubDate>
+      <guid>https://zhuangdizhu.github.io/publication/hierarchical-federated-unlearning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web Intellectual Property at Risk: Preventing Unauthorized Real-Time Retrieval by Large Language Models</title>
+      <link>https://zhuangdizhu.github.io/publication/web-ip-risk/</link>
+      <pubDate>Mon, 19 May 2025 03:14:08 +0000</pubDate>
+      <guid>https://zhuangdizhu.github.io/publication/web-ip-risk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ChatWise: AI-Powered Engaging Conversations for Enhancing Senior Cognitive Wellbeing</title>
+      <link>https://zhuangdizhu.github.io/publication/chatwise/</link>
+      <pubDate>Wed, 19 Feb 2025 21:32:09 +0000</pubDate>
+      <guid>https://zhuangdizhu.github.io/publication/chatwise/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

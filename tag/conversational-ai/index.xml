@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Conversational AI | Zhuangdi Zhu</title>
+    <link>https://zhuangdizhu.github.io/tag/conversational-ai/</link>
+      <atom:link href="https://zhuangdizhu.github.io/tag/conversational-ai/index.xml" rel="self" type="application/rss+xml" />
+    <description>Conversational AI</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2026 Zhuangdi Zhu</copyright><lastBuildDate>Wed, 19 Feb 2025 21:32:09 +0000</lastBuildDate>
+    <image>
+      <url>https://zhuangdizhu.github.io/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_512x512_fill_lanczos_center_3.png</url>
+      <title>Conversational AI</title>
+      <link>https://zhuangdizhu.github.io/tag/conversational-ai/</link>
+    </image>
+    
+    <item>
+      <title>ChatWise: AI-Powered Engaging Conversations for Enhancing Senior Cognitive Wellbeing</title>
+      <link>https://zhuangdizhu.github.io/publication/chatwise/</link>
+      <pubDate>Wed, 19 Feb 2025 21:32:09 +0000</pubDate>
+      <guid>https://zhuangdizhu.github.io/publication/chatwise/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Federated Unlearning | Zhuangdi Zhu</title>
+    <link>https://zhuangdizhu.github.io/tag/federated-unlearning/</link>
+      <atom:link href="https://zhuangdizhu.github.io/tag/federated-unlearning/index.xml" rel="self" type="application/rss+xml" />
+    <description>Federated Unlearning</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2026 Zhuangdi Zhu</copyright><lastBuildDate>Sun, 19 Oct 2025 04:24:51 +0000</lastBuildDate>
+    <image>
+      <url>https://zhuangdizhu.github.io/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_512x512_fill_lanczos_center_3.png</url>
+      <title>Federated Unlearning</title>
+      <link>https://zhuangdizhu.github.io/tag/federated-unlearning/</link>
+    </image>
+    
+    <item>
+      <title>Hierarchical Federated Unlearning for Large Language Models</title>
+      <link>https://zhuangdizhu.github.io/publication/hierarchical-federated-unlearning/</link>
+      <pubDate>Sun, 19 Oct 2025 04:24:51 +0000</pubDate>
+      <guid>https://zhuangdizhu.github.io/publication/hierarchical-federated-unlearning/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

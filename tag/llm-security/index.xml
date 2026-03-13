@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LLM Security | Zhuangdi Zhu</title>
+    <link>https://zhuangdizhu.github.io/tag/llm-security/</link>
+      <atom:link href="https://zhuangdizhu.github.io/tag/llm-security/index.xml" rel="self" type="application/rss+xml" />
+    <description>LLM Security</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2026 Zhuangdi Zhu</copyright><lastBuildDate>Mon, 19 May 2025 03:14:08 +0000</lastBuildDate>
+    <image>
+      <url>https://zhuangdizhu.github.io/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_512x512_fill_lanczos_center_3.png</url>
+      <title>LLM Security</title>
+      <link>https://zhuangdizhu.github.io/tag/llm-security/</link>
+    </image>
+    
+    <item>
+      <title>Web Intellectual Property at Risk: Preventing Unauthorized Real-Time Retrieval by Large Language Models</title>
+      <link>https://zhuangdizhu.github.io/publication/web-ip-risk/</link>
+      <pubDate>Mon, 19 May 2025 03:14:08 +0000</pubDate>
+      <guid>https://zhuangdizhu.github.io/publication/web-ip-risk/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -2,16 +2,76 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://zhuangdizhu.github.io/publication-type/3/</loc>
+    <lastmod>2026-02-02T21:23:54+00:00</lastmod>
+  </url><url>
+    <loc>https://zhuangdizhu.github.io/tag/alignment/</loc>
+    <lastmod>2026-02-02T21:23:54+00:00</lastmod>
+  </url><url>
+    <loc>https://zhuangdizhu.github.io/publication/catnip/</loc>
+    <lastmod>2026-02-02T21:23:54+00:00</lastmod>
+  </url><url>
+    <loc>https://zhuangdizhu.github.io/tag/llm-unlearning/</loc>
+    <lastmod>2026-02-02T21:23:54+00:00</lastmod>
+  </url><url>
+    <loc>https://zhuangdizhu.github.io/publication_types/</loc>
+    <lastmod>2026-02-02T21:23:54+00:00</lastmod>
+  </url><url>
+    <loc>https://zhuangdizhu.github.io/publication/</loc>
+    <lastmod>2026-02-02T21:23:54+00:00</lastmod>
+  </url><url>
+    <loc>https://zhuangdizhu.github.io/tags/</loc>
+    <lastmod>2026-02-02T21:23:54+00:00</lastmod>
+  </url><url>
+    <loc>https://zhuangdizhu.github.io/tag/trustworthy-ai/</loc>
+    <lastmod>2026-02-02T21:23:54+00:00</lastmod>
+  </url><url>
+    <loc>https://zhuangdizhu.github.io/</loc>
+    <lastmod>2026-02-02T21:23:54+00:00</lastmod>
+  </url><url>
+    <loc>https://zhuangdizhu.github.io/publication/duet/</loc>
+    <lastmod>2026-01-29T05:32:35+00:00</lastmod>
+  </url><url>
+    <loc>https://zhuangdizhu.github.io/tag/knowledge-distillation/</loc>
+    <lastmod>2026-01-29T05:32:35+00:00</lastmod>
+  </url><url>
+    <loc>https://zhuangdizhu.github.io/tag/federated-unlearning/</loc>
+    <lastmod>2025-10-19T04:24:51+00:00</lastmod>
+  </url><url>
+    <loc>https://zhuangdizhu.github.io/publication/hierarchical-federated-unlearning/</loc>
+    <lastmod>2025-10-19T04:24:51+00:00</lastmod>
+  </url><url>
+    <loc>https://zhuangdizhu.github.io/tag/llms/</loc>
+    <lastmod>2025-10-19T04:24:51+00:00</lastmod>
+  </url><url>
+    <loc>https://zhuangdizhu.github.io/tag/privacy/</loc>
+    <lastmod>2025-10-19T04:24:51+00:00</lastmod>
+  </url><url>
+    <loc>https://zhuangdizhu.github.io/tag/defense/</loc>
+    <lastmod>2025-05-19T03:14:08+00:00</lastmod>
+  </url><url>
+    <loc>https://zhuangdizhu.github.io/tag/llm-security/</loc>
+    <lastmod>2025-05-19T03:14:08+00:00</lastmod>
+  </url><url>
+    <loc>https://zhuangdizhu.github.io/publication/web-ip-risk/</loc>
+    <lastmod>2025-05-19T03:14:08+00:00</lastmod>
+  </url><url>
+    <loc>https://zhuangdizhu.github.io/tag/web-ip/</loc>
+    <lastmod>2025-05-19T03:14:08+00:00</lastmod>
+  </url><url>
+    <loc>https://zhuangdizhu.github.io/publication/chatwise/</loc>
+    <lastmod>2025-02-19T21:32:09+00:00</lastmod>
+  </url><url>
+    <loc>https://zhuangdizhu.github.io/tag/conversational-ai/</loc>
+    <lastmod>2025-02-19T21:32:09+00:00</lastmod>
+  </url><url>
+    <loc>https://zhuangdizhu.github.io/tag/healthcare/</loc>
+    <lastmod>2025-02-19T21:32:09+00:00</lastmod>
+  </url><url>
     <loc>https://zhuangdizhu.github.io/publication-type/2/</loc>
     <lastmod>2023-09-23T13:08:20+08:00</lastmod>
   </url><url>
     <loc>https://zhuangdizhu.github.io/tag/knowledge-transfer/</loc>
-    <lastmod>2023-09-23T13:08:20+08:00</lastmod>
-  </url><url>
-    <loc>https://zhuangdizhu.github.io/publication_types/</loc>
-    <lastmod>2023-09-23T13:08:20+08:00</lastmod>
-  </url><url>
-    <loc>https://zhuangdizhu.github.io/publication/</loc>
     <lastmod>2023-09-23T13:08:20+08:00</lastmod>
   </url><url>
     <loc>https://zhuangdizhu.github.io/tag/reinforcement-learning/</loc>
@@ -20,29 +80,11 @@
     <loc>https://zhuangdizhu.github.io/tag/survey/</loc>
     <lastmod>2023-09-23T13:08:20+08:00</lastmod>
   </url><url>
-    <loc>https://zhuangdizhu.github.io/tags/</loc>
-    <lastmod>2023-09-23T13:08:20+08:00</lastmod>
-  </url><url>
     <loc>https://zhuangdizhu.github.io/publication/rlsurvey/</loc>
     <lastmod>2023-09-23T13:08:20+08:00</lastmod>
   </url><url>
-    <loc>https://zhuangdizhu.github.io/</loc>
-    <lastmod>2023-09-23T13:08:20+08:00</lastmod>
-  </url><url>
     <loc>https://zhuangdizhu.github.io/publication-type/1/</loc>
-    <lastmod>2022-11-14T13:08:20+08:00</lastmod>
-  </url><url>
-    <loc>https://zhuangdizhu.github.io/tag/poison-data-attack/</loc>
-    <lastmod>2022-11-14T13:08:20+08:00</lastmod>
-  </url><url>
-    <loc>https://zhuangdizhu.github.io/tag/robust-learning/</loc>
-    <lastmod>2022-11-14T13:08:20+08:00</lastmod>
-  </url><url>
-    <loc>https://zhuangdizhu.github.io/publication/ruda/</loc>
-    <lastmod>2022-11-14T13:08:20+08:00</lastmod>
-  </url><url>
-    <loc>https://zhuangdizhu.github.io/tag/unsupervised-domain-adaptation/</loc>
-    <lastmod>2022-11-14T13:08:20+08:00</lastmod>
+    <lastmod>2022-06-02T13:08:20+08:00</lastmod>
   </url><url>
     <loc>https://zhuangdizhu.github.io/tag/exploration-in-rl/</loc>
     <lastmod>2022-06-02T13:08:20+08:00</lastmod>
