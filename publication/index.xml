@@ -5,18 +5,34 @@
     <link>https://zhuangdizhu.github.io/publication/</link>
       <atom:link href="https://zhuangdizhu.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Publications</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2026 Zhuangdi Zhu</copyright><lastBuildDate>Mon, 02 Feb 2026 21:23:54 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2026 Zhuangdi Zhu</copyright><lastBuildDate>Sat, 22 Aug 2026 06:21:27 +0000</lastBuildDate>
     <image>
-      <url>https://zhuangdizhu.github.io/media/icon_hucab448affb9213f36d8e962fe68c6b19_391842_512x512_fill_lanczos_center_3.png</url>
+      <url>https://zhuangdizhu.github.io/media/icon_hu_5af4c8bc2f9c0407.png</url>
       <title>Publications</title>
       <link>https://zhuangdizhu.github.io/publication/</link>
     </image>
     
     <item>
-      <title>CATNIP: LLM Unlearning via Calibrated and Tokenized Negative Preference Alignment</title>
+      <title>CALIBURN: Self-Calibrated LLM Unlearning Alignment</title>
       <link>https://zhuangdizhu.github.io/publication/catnip/</link>
-      <pubDate>Mon, 02 Feb 2026 21:23:54 +0000</pubDate>
+      <pubDate>Sat, 22 Aug 2026 06:21:27 +0000</pubDate>
       <guid>https://zhuangdizhu.github.io/publication/catnip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Distribution Corrected Offline Data Distillation for Large Language Models</title>
+      <link>https://zhuangdizhu.github.io/publication/discord/</link>
+      <pubDate>Tue, 11 Aug 2026 12:00:00 +0000</pubDate>
+      <guid>https://zhuangdizhu.github.io/publication/discord/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Can LLMs Prove Robotic Path Planning Optimality? A Benchmark for Research-Level Algorithm Verification</title>
+      <link>https://zhuangdizhu.github.io/publication/robotic-path-planning-optimality/</link>
+      <pubDate>Fri, 17 Jul 2026 01:47:32 +0000</pubDate>
+      <guid>https://zhuangdizhu.github.io/publication/robotic-path-planning-optimality/</guid>
       <description></description>
     </item>
     
